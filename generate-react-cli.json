@@ -6,52 +6,56 @@
       "path": "src/components",
       "withLazy": false,
       "withStory": false,
-      "withStyle": false,
+      "withStyle": true,
       "withTest": true,
       "withIndex": true,
       "customTemplates": {
         "component": "templates/default/TemplateName.tsx",
         "index": "templates/default/index.ts",
-        "test": "templates/default/TemplateName.test.tsx"
+        "test": "templates/default/TemplateName.test.tsx",
+        "style": "templates/default/TemplateName.style.ts"
       }
     },
     "page": {
       "path": "src/pages",
       "withLazy": false,
       "withStory": false,
-      "withStyle": false,
+      "withStyle": true,
       "withTest": true,
       "withIndex": true,
       "customTemplates": {
         "component": "templates/page/TemplateName.tsx",
         "index": "templates/default/index.ts",
-        "test": "templates/default/TemplateName.test.tsx"
+        "test": "templates/default/TemplateName.test.tsx",
+        "style": "templates/default/TemplateName.style.ts"
       }
     },
     "layout": {
       "path": "src/layout",
       "withLazy": false,
       "withStory": false,
-      "withStyle": false,
+      "withStyle": true,
       "withTest": true,
       "withIndex": true,
       "customTemplates": {
         "component": "templates/layout/TemplateName.tsx",
         "index": "templates/default/index.ts",
-        "test": "templates/default/TemplateName.test.tsx"
+        "test": "templates/default/TemplateName.test.tsx",
+        "style": "templates/default/TemplateName.style.ts"
       }
     },
     "feature": {
       "path": "src/features",
       "withLazy": false,
       "withStory": false,
-      "withStyle": false,
+      "withStyle": true,
       "withTest": true,
       "withIndex": true,
       "customTemplates": {
         "component": "templates/feature/TemplateName.tsx",
         "index": "templates/default/index.ts",
-        "test": "templates/default/TemplateName.test.tsx"
+        "test": "templates/default/TemplateName.test.tsx",
+        "style": "templates/default/TemplateName.style.ts"
       }
     }
   },
