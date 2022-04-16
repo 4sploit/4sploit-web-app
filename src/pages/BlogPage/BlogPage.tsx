@@ -1,6 +1,6 @@
-import React from "react";
+import { FC } from "react";
 
-const BlogPage: React.FC = () => {
+const BlogPage: FC = () => {
   return <>Blog Page</>;
 };
 

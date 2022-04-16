@@ -1,7 +1,7 @@
-import React from "react";
+import { FC } from "react";
 import { Outlet } from "react-router-dom";
 
-const AppLayout: React.FC = () => {
+const AppLayout: FC = () => {
   return (
     <>
       <div>header</div>

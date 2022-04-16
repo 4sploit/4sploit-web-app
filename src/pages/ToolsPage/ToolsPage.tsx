@@ -1,6 +1,6 @@
-import React from "react";
+import { FC } from "react";
 
-const ToolsPage: React.FC = () => {
+const ToolsPage: FC = () => {
   return <>Tools Page</>;
 };
 

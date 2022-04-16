@@ -1,6 +1,6 @@
-import React from "react";
+import { FC } from "react";
 
-const ProjectsPage: React.FC = () => {
+const ProjectsPage: FC = () => {
   return <>Projects Page</>;
 };
 
