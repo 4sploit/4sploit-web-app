@@ -9,6 +9,7 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^14.0.4",
+    "generate-react-cli": "^7.1.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.3.0",
@@ -35,7 +36,11 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.ts src/**/*.tsx",
-    "lint-fix": "eslint --fix src/**/*.ts src/**/*.tsx"
+    "lint-fix": "eslint --fix src/**/*.ts src/**/*.tsx",
+    "gen-component": "npx generate-react-cli component",
+    "gen-page": "npm run gen-component -- --type=page",
+    "gen-feature": "npm run gen-component -- --type=feature",
+    "gen-layout": "npm run gen-component -- --type=layout"
   },
   "eslintConfig": {
     "extends": [
