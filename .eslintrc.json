@@ -1,0 +1,42 @@
+{
+  "root": true,
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint"],
+  "rules": {
+    "indent": ["error", 2],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "double"],
+    "eol-last": ["error", "always"],
+    "semi": ["error", "always"],
+    "semi-spacing": ["error", {"before": false, "after": true}],
+    "max-len": ["error", { "code": 75 }],
+    "max-statements-per-line": ["error", { "max": 1 }],
+    "no-duplicate-imports": ["error", { "includeExports": true }],
+    "no-eval": "error",
+    "no-delete-var": "error",
+    "no-empty-function": "error",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-uses-vars": "error"
+  }
+}
