@@ -10,12 +10,13 @@ import {
   ProjectsPage,
   ToolsPage,
 } from "./pages";
-import { appTheme } from "./styles";
+import { AppTheme, GlobalStyle } from "./styles";
 
 const App = () => {
   return (
-    <MuiThemeProvider theme={appTheme}>
-      <ThemeProvider theme={appTheme}>
+    <MuiThemeProvider theme={AppTheme}>
+      <ThemeProvider theme={AppTheme}>
+        <GlobalStyle />
         <BrowserRouter>
           <Routes>
             {renderAppRoutes()}

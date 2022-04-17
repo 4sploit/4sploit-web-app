@@ -1,1 +1,2 @@
-export { appTheme } from "./themes";
+export { AppTheme } from "./themes";
+export { GlobalStyle } from "./global";
