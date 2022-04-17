@@ -1,7 +1,7 @@
 import { ThemeProvider as MuiThemeProvider } from "@mui/system";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-// import env from "./environment";
+import env from "./environment";
 import { AppLayout } from "./layouts";
 import {
   BlogPage,
@@ -9,6 +9,7 @@ import {
   NotFoundPage,
   ProjectsPage,
   ToolsPage,
+  UnderConstructionPage,
 } from "./pages";
 import { AppTheme, GlobalStyle } from "./styles";
 
@@ -19,10 +20,9 @@ const App = () => {
         <GlobalStyle />
         <BrowserRouter>
           <Routes>
-            {renderAppRoutes()}
-            {/* {env.isUnderConstruction
+            {env.isUnderConstruction
               ? renderUnderConstructionRoute()
-              : renderAppRoutes()} */}
+              : renderAppRoutes()}
           </Routes>
         </BrowserRouter>
       </ThemeProvider>
@@ -43,8 +43,7 @@ const renderAppRoutes = () => {
 };
 
 const renderUnderConstructionRoute = () => {
-  return <></>;
-  // return <Route path="*" element={<UnderConstructionPage />} />;
+  return <Route path="*" element={<UnderConstructionPage />} />;
 };
 
 export default App;
