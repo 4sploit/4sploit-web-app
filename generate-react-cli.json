@@ -9,11 +9,13 @@
       "withStyle": true,
       "withTest": true,
       "withIndex": true,
+      "withProps": true,
       "customTemplates": {
         "component": "templates/default/TemplateName.tsx",
         "index": "templates/default/index.ts",
         "test": "templates/default/TemplateName.test.tsx",
-        "style": "templates/default/TemplateName.style.ts"
+        "style": "templates/default/TemplateName.style.ts",
+        "props": "templates/default/TemplateName.props.ts"
       }
     },
     "page": {
@@ -23,11 +25,13 @@
       "withStyle": true,
       "withTest": true,
       "withIndex": true,
+      "withProps": true,
       "customTemplates": {
-        "component": "templates/page/TemplateName.tsx",
+        "component": "templates/default/TemplateName.tsx",
         "index": "templates/default/index.ts",
         "test": "templates/default/TemplateName.test.tsx",
-        "style": "templates/default/TemplateName.style.ts"
+        "style": "templates/default/TemplateName.style.ts",
+        "props": "templates/default/TemplateName.props.ts"
       }
     },
     "layout": {
@@ -37,11 +41,13 @@
       "withStyle": true,
       "withTest": true,
       "withIndex": true,
+      "withProps": true,
       "customTemplates": {
-        "component": "templates/layout/TemplateName.tsx",
+        "component": "templates/default/TemplateName.tsx",
         "index": "templates/default/index.ts",
         "test": "templates/default/TemplateName.test.tsx",
-        "style": "templates/default/TemplateName.style.ts"
+        "style": "templates/default/TemplateName.style.ts",
+        "props": "templates/default/TemplateName.props.ts"
       }
     },
     "feature": {
@@ -51,11 +57,13 @@
       "withStyle": true,
       "withTest": true,
       "withIndex": true,
+      "withProps": true,
       "customTemplates": {
-        "component": "templates/feature/TemplateName.tsx",
+        "component": "templates/default/TemplateName.tsx",
         "index": "templates/default/index.ts",
         "test": "templates/default/TemplateName.test.tsx",
-        "style": "templates/default/TemplateName.style.ts"
+        "style": "templates/default/TemplateName.style.ts",
+        "props": "templates/default/TemplateName.props.ts"
       }
     }
   },
