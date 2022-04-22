@@ -1,10 +1,10 @@
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import NotFoundPage from "./NotFoundPage";
 
 describe("<NotFoundPage />", () => {
   it("should render without crashing", () => {
-    const div = document.createElement("div");
-    ReactDOM.render(<NotFoundPage />, div);
-    ReactDOM.unmountComponentAtNode(div);
+    const rootElement = document.createElement("div");
+    const root = ReactDOM.createRoot(rootElement);
+    root.render(<NotFoundPage />);
   });
 });

@@ -1,11 +1,10 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import App from "./App";
 
 describe("<App />", () => {
   it("should render without crashing", () => {
-    const div = document.createElement("div");
-    ReactDOM.render(<App />, div);
-    ReactDOM.unmountComponentAtNode(div);
+    const rootElement = document.createElement("div");
+    const root = ReactDOM.createRoot(rootElement);
+    root.render(<App />);
   });
 });
