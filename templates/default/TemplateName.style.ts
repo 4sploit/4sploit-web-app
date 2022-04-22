@@ -1,3 +1,5 @@
 import styled from "styled-components";
 
-export const TemplateName = styled.div``;
+interface StyledTemplateNameProps {}
+
+export const StyledTemplateName = styled.div<StyledTemplateNameProps>``;
