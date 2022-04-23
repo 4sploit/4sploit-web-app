@@ -1,8 +1,8 @@
 import { FC } from "react";
-import { Props, defaultProps } from "./TemplateName.props";
+import { TemplateNameProps, defaultProps } from "./TemplateName.props";
 import { StyledTemplateName } from "./TemplateName.style";
 
-const TemplateName: FC<Props> = (props: Props) => {
+const TemplateName: FC<TemplateNameProps> = (props: TemplateNameProps) => {
   return (
     <StyledTemplateName {...props}>
       TemplateName Component
