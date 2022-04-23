@@ -1,5 +1,3 @@
-export type Props = TemplateNameProps;
-
 export interface TemplateNameProps {}
 
-export const defaultProps: Partial<Props> = {};
+export const defaultProps: Partial<TemplateNameProps> = {};
