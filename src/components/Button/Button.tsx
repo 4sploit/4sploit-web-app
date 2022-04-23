@@ -1,8 +1,8 @@
 import { FC } from "react";
 import { StyledButton } from "./Button.style";
-import { Props, defaultProps } from "./Button.props";
+import { ButtonProps, defaultProps } from "./Button.props";
 
-const Button: FC<Props> = ({
+const Button: FC<ButtonProps> = ({
   id,
   className,
   disabled,

@@ -1,8 +1,8 @@
 import { FC } from "react";
-import { Props, defaultProps } from "./IconButton.props";
+import { IconButtonProps, defaultProps } from "./IconButton.props";
 import { StyledIconButton } from "./IconButton.style";
 
-const IconButton: FC<Props> = ({
+const IconButton: FC<IconButtonProps> = ({
   id,
   className,
   disabled,

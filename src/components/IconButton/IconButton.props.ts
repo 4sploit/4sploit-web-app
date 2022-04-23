@@ -1,8 +1,6 @@
 import { MouseEventHandler, ReactNode } from "react";
 import { ButtonColors } from "../Button";
 
-export type Props = IconButtonProps;
-
 export interface IconButtonProps {
   id?: string;
   className?: string;
@@ -12,6 +10,6 @@ export interface IconButtonProps {
   onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
-export const defaultProps: Partial<Props> = {
+export const defaultProps: Partial<IconButtonProps> = {
   color: ButtonColors.Primary,
 };
