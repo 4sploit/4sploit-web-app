@@ -1,4 +1,4 @@
-import { PublicRoute } from "./components/PublicRoute";
+import { Route } from "react-router-dom";
 import { AppLayout } from "./layouts";
 import {
   BlogPage,
@@ -10,15 +10,15 @@ import {
 } from "./pages";
 
 export const appRoutes = (
-  <PublicRoute element={<AppLayout />}>
-    <PublicRoute path="/" element={<HomePage />} />
-    <PublicRoute path="/blog" element={<BlogPage />} />
-    <PublicRoute path="/tools" element={<ToolsPage />} />
-    <PublicRoute path="/projects" element={<ProjectsPage />} />
-    <PublicRoute path="*" element={<NotFoundPage />} />
-  </PublicRoute>
+  <Route element={<AppLayout />}>
+    <Route path="/" element={<HomePage />} />
+    <Route path="/blog" element={<BlogPage />} />
+    <Route path="/tools" element={<ToolsPage />} />
+    <Route path="/projects" element={<ProjectsPage />} />
+    <Route path="*" element={<NotFoundPage />} />
+  </Route>
 );
 
 export const underConstructionRoutes = (
-  <PublicRoute path="*" element={<UnderConstructionPage />} />
+  <Route path="*" element={<UnderConstructionPage />} />
 );
