@@ -1,16 +1,8 @@
 import { ThemeProvider as MuiThemeProvider } from "@mui/system";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Routes } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
+import { appRoutes, underConstructionRoutes } from "./App.routes";
 import env from "./environment";
-import { AppLayout } from "./layouts";
-import {
-  BlogPage,
-  HomePage,
-  NotFoundPage,
-  ProjectsPage,
-  ToolsPage,
-  UnderConstructionPage,
-} from "./pages";
 import { AppTheme, GlobalStyle } from "./styles";
 
 const App = () => {
@@ -20,30 +12,12 @@ const App = () => {
         <GlobalStyle />
         <BrowserRouter>
           <Routes>
-            {env.isUnderConstruction
-              ? renderUnderConstructionRoute()
-              : renderAppRoutes()}
+            {env.isUnderConstruction ? appRoutes : underConstructionRoutes}
           </Routes>
         </BrowserRouter>
       </ThemeProvider>
     </MuiThemeProvider>
   );
-};
-
-const renderAppRoutes = () => {
-  return (
-    <Route element={<AppLayout />}>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/blog" element={<BlogPage />} />
-      <Route path="/tools" element={<ToolsPage />} />
-      <Route path="/projects" element={<ProjectsPage />} />
-      <Route path="*" element={<NotFoundPage />} />
-    </Route>
-  );
-};
-
-const renderUnderConstructionRoute = () => {
-  return <Route path="*" element={<UnderConstructionPage />} />;
 };
 
 export default App;
