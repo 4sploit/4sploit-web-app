@@ -4,19 +4,24 @@ import { ThemeProvider } from "styled-components";
 import { appRoutes, underConstructionRoutes } from "./App.routes";
 import env from "./environment";
 import { AppTheme, GlobalStyle } from "./styles";
+import { HelmetProvider } from "react-helmet-async";
 
 const App = () => {
   return (
-    <MuiThemeProvider theme={AppTheme}>
-      <ThemeProvider theme={AppTheme}>
-        <GlobalStyle />
-        <BrowserRouter>
-          <Routes>
-            {env.isUnderConstruction ? appRoutes : underConstructionRoutes}
-          </Routes>
-        </BrowserRouter>
-      </ThemeProvider>
-    </MuiThemeProvider>
+    <HelmetProvider>
+      <MuiThemeProvider theme={AppTheme}>
+        <ThemeProvider theme={AppTheme}>
+          <GlobalStyle />
+          <BrowserRouter>
+            <Routes>
+              {env.isUnderConstruction
+                ? underConstructionRoutes
+                : appRoutes}
+            </Routes>
+          </BrowserRouter>
+        </ThemeProvider>
+      </MuiThemeProvider>
+    </HelmetProvider>
   );
 };
 
