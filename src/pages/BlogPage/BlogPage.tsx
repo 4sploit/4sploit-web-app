@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { BlogPageProps, defaultProps } from "./BlogPage.props";
 import { StyledBlogPage } from "./BlogPage.style";
-import { PageMetadata } from "src/components";
+import { PageMetadata } from "src/common/components";
 import { metadata } from "./BlogPage.metadata";
 
 const BlogPage: FC<BlogPageProps> = (props: BlogPageProps) => {

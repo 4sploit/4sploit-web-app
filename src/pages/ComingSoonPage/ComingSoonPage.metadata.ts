@@ -1,4 +1,4 @@
-import { Metadata, Robots } from "src/types";
+import { Metadata, Robots } from "src/common/types";
 
 export const metadata: Metadata = {
   title: "Coming Soon",

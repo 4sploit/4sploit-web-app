@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { HomePageProps, defaultProps } from "./HomePage.props";
 import { StyledHomePage } from "./HomePage.style";
-import { PageMetadata } from "src/components";
+import { PageMetadata } from "src/common/components";
 import { metadata } from "./HomePage.metadata";
 import { Link } from "react-router-dom";
 

@@ -1,4 +1,4 @@
-import { Metadata } from "src/types";
+import { Metadata } from "src/common/types";
 
 export const metadata: Metadata = {
   title: "Home",

@@ -1,5 +1,4 @@
-import { Robots } from "src/types";
-import { Metadata } from "src/types/Metadata";
+import { Metadata, Robots } from "src/common/types";
 
 export type PageMetadataProps = Metadata & AdditionalProps;
 

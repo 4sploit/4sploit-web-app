@@ -1,5 +1,5 @@
 import { Route } from "react-router-dom";
-import { AppLayout } from "./layouts";
+import { AppLayout } from "./common/layouts";
 import {
   BlogPage,
   HomePage,

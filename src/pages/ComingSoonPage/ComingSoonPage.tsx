@@ -1,11 +1,10 @@
 import { FC } from "react";
 import { ComingSoonPageProps, defaultProps } from "./ComingSoonPage.props";
 import { StyledComingSoonPage } from "./ComingSoonPage.style";
-import { PageMetadata } from "src/components";
+import { PageMetadata } from "src/common/components";
 import { metadata } from "./ComingSoonPage.metadata";
 import { Box } from "@mui/material";
-import endlessConstellation from "\
-./../../resources/images/endless-constellation.svg";
+import endlessCon from "src/assets/images/endless-constellation.svg";
 
 const ComingSoonPage: FC<ComingSoonPageProps> = (
   props: ComingSoonPageProps
@@ -17,7 +16,7 @@ const ComingSoonPage: FC<ComingSoonPageProps> = (
         <Box
           display={"flex"}
           sx={{
-            backgroundImage: `url(${endlessConstellation})`,
+            backgroundImage: `url(${endlessCon})`,
             height: "100vh",
             width: "100vw",
             justifyContent: "center",

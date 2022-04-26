@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { NotFoundPageProps, defaultProps } from "./NotFoundPage.props";
 import { StyledNotFoundPage } from "./NotFoundPage.style";
-import { PageMetadata } from "src/components";
+import { PageMetadata } from "src/common/components";
 import { metadata } from "./NotFoundPage.metadata";
 
 const NotFoundPage: FC<NotFoundPageProps> = (props: NotFoundPageProps) => {

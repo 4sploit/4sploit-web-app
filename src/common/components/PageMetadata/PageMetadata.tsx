@@ -1,6 +1,6 @@
 import { memo } from "react";
 import { Helmet } from "react-helmet-async";
-import env from "src/environment";
+import { env } from "src/common/environment";
 import { defaultProps, PageMetadataProps } from "./PageMetadata.props";
 
 const PageMetadata = (props: PageMetadataProps) => {
