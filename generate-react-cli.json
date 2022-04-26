@@ -26,12 +26,14 @@
       "withTest": true,
       "withIndex": true,
       "withProps": true,
+      "withMetadata": true,
       "customTemplates": {
-        "component": "templates/default/TemplateName.tsx",
+        "component": "templates/page/TemplateName.tsx",
         "index": "templates/default/index.ts",
         "test": "templates/default/TemplateName.test.tsx",
         "style": "templates/default/TemplateName.style.ts",
-        "props": "templates/default/TemplateName.props.ts"
+        "props": "templates/default/TemplateName.props.ts",
+        "metadata": "templates/page/TemplateName.metadata.ts"
       }
     },
     "layout": {

@@ -5,20 +5,18 @@ import {
   HomePage,
   NotFoundPage,
   ProjectsPage,
-  ToolsPage,
-  UnderConstructionPage,
+  ComingSoonPage,
 } from "./pages";
 
 export const appRoutes = (
   <Route element={<AppLayout />}>
     <Route path="/" element={<HomePage />} />
     <Route path="/blog" element={<BlogPage />} />
-    <Route path="/tools" element={<ToolsPage />} />
     <Route path="/projects" element={<ProjectsPage />} />
     <Route path="*" element={<NotFoundPage />} />
   </Route>
 );
 
-export const underConstructionRoutes = (
-  <Route path="*" element={<UnderConstructionPage />} />
+export const comingSoonRoute = (
+  <Route path="*" element={<ComingSoonPage />} />
 );

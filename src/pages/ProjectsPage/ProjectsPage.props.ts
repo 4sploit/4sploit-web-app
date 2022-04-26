@@ -1,5 +1,3 @@
-export type Props = ProjectsPageProps;
-
 export interface ProjectsPageProps {}
 
-export const defaultProps: Partial<Props> = {};
+export const defaultProps: Partial<ProjectsPageProps> = {};

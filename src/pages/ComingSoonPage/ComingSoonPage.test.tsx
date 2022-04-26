@@ -1,10 +1,10 @@
 import ReactDOM from "react-dom/client";
-import ToolsPage from "./ToolsPage";
+import ComingSoonPage from "./ComingSoonPage";
 
-describe("<ToolsPage />", () => {
+describe("<ComingSoonPage />", () => {
   it("should render without crashing", () => {
     const rootElement = document.createElement("div");
     const root = ReactDOM.createRoot(rootElement);
-    root.render(<ToolsPage />);
+    root.render(<ComingSoonPage />);
   });
 });

@@ -1,13 +1,26 @@
 import { FC } from "react";
+import { HomePageProps, defaultProps } from "./HomePage.props";
+import { StyledHomePage } from "./HomePage.style";
+import { PageMetadata } from "src/components";
+import { metadata } from "./HomePage.metadata";
 import { Link } from "react-router-dom";
 
-const HomePage: FC = () => {
+const HomePage: FC<HomePageProps> = (props: HomePageProps) => {
   return (
     <>
-      Home Page
-      <Link to={"/projects"}>projects</Link>
+      <PageMetadata {...metadata} />
+      <StyledHomePage {...props}>
+        <div>
+          <Link to={"/projects"}>projects</Link>
+        </div>
+        <div>
+          <Link to={"/blog"}>blog</Link>
+        </div>
+      </StyledHomePage>
     </>
   );
 };
+
+HomePage.defaultProps = defaultProps;
 
 export default HomePage;
