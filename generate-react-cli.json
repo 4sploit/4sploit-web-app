@@ -3,7 +3,7 @@
   "testLibrary": "jest",
   "component": {
     "default": {
-      "path": "src/components",
+      "path": "src/common/components",
       "withLazy": false,
       "withStory": false,
       "withStyle": true,
@@ -37,7 +37,7 @@
       }
     },
     "layout": {
-      "path": "src/layout",
+      "path": "src/common/layouts",
       "withLazy": false,
       "withStory": false,
       "withStyle": true,
