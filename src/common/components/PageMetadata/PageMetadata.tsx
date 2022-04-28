@@ -1,16 +1,16 @@
-import { memo } from "react";
+import { FC } from "react";
 import { Helmet } from "react-helmet-async";
 import { env } from "src/common/environment";
 import { defaultProps, PageMetadataProps } from "./PageMetadata.props";
 
-const PageMetadata = (props: PageMetadataProps) => {
+const PageMetadata: FC<PageMetadataProps> = (props: PageMetadataProps) => {
   const { title, description, robots, withTitlePostfix } = {
     ...defaultProps,
     ...props,
   };
 
   return (
-    <Helmet>
+    <Helmet prioritizeSeoTags>
       <title>
         {`${title}`} {withTitlePostfix ? `| ${env.title}` : ""}
       </title>
@@ -20,4 +20,4 @@ const PageMetadata = (props: PageMetadataProps) => {
   );
 };
 
-export default memo(PageMetadata);
+export default PageMetadata;
