@@ -1,17 +1,20 @@
 import { FC } from "react";
 import { ComingSoonPageProps, defaultProps } from "./ComingSoonPage.props";
 import { StyledComingSoonPage } from "./ComingSoonPage.style";
-import { PageMetadata } from "src/common/components";
-import { metadata } from "./ComingSoonPage.metadata";
 import { Box } from "@mui/material";
 import endlessCon from "src/assets/images/endless-constellation.svg";
+import { useAppDispatch } from "src/app/hooks";
+import { setMetadata } from "src/features/PageMetadata/PageMetadata.slice";
+import { metadata } from "./ComingSoonPage.metadata";
 
 const ComingSoonPage: FC<ComingSoonPageProps> = (
   props: ComingSoonPageProps
 ) => {
+  const dispatch = useAppDispatch();
+  dispatch(setMetadata(metadata));
+
   return (
     <>
-      <PageMetadata {...metadata} withTitlePostfix={false} />
       <StyledComingSoonPage {...props}>
         <Box
           display={"flex"}

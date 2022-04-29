@@ -1,16 +1,15 @@
 import { FC } from "react";
+import { useAppDispatch } from "src/app/hooks";
+import { setMetadata } from "src/features/PageMetadata/PageMetadata.slice";
+import { metadata } from "./BlogPage.metadata";
 import { BlogPageProps, defaultProps } from "./BlogPage.props";
 import { StyledBlogPage } from "./BlogPage.style";
-import { PageMetadata } from "src/common/components";
-import { metadata } from "./BlogPage.metadata";
 
 const BlogPage: FC<BlogPageProps> = (props: BlogPageProps) => {
-  return (
-    <>
-      <PageMetadata {...metadata} />
-      <StyledBlogPage {...props}>BlogPage</StyledBlogPage>
-    </>
-  );
+  const dispatch = useAppDispatch();
+  dispatch(setMetadata(metadata));
+
+  return <StyledBlogPage {...props}>BlogPage</StyledBlogPage>;
 };
 
 BlogPage.defaultProps = defaultProps;

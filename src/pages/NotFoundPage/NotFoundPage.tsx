@@ -1,16 +1,15 @@
 import { FC } from "react";
+import { useAppDispatch } from "src/app/hooks";
+import { setMetadata } from "src/features/PageMetadata/PageMetadata.slice";
+import { metadata } from "./NotFoundPage.metadata";
 import { NotFoundPageProps, defaultProps } from "./NotFoundPage.props";
 import { StyledNotFoundPage } from "./NotFoundPage.style";
-import { PageMetadata } from "src/common/components";
-import { metadata } from "./NotFoundPage.metadata";
 
 const NotFoundPage: FC<NotFoundPageProps> = (props: NotFoundPageProps) => {
-  return (
-    <>
-      <PageMetadata {...metadata} />
-      <StyledNotFoundPage {...props}>NotFoundPage</StyledNotFoundPage>
-    </>
-  );
+  const dispatch = useAppDispatch();
+  dispatch(setMetadata(metadata));
+
+  return <StyledNotFoundPage {...props}>NotFoundPage</StyledNotFoundPage>;
 };
 
 NotFoundPage.defaultProps = defaultProps;

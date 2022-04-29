@@ -1,16 +1,15 @@
 import { FC } from "react";
+import { useAppDispatch } from "src/app/hooks";
+import { setMetadata } from "src/features/PageMetadata/PageMetadata.slice";
+import { metadata } from "./ProjectsPage.metadata";
 import { ProjectsPageProps, defaultProps } from "./ProjectsPage.props";
 import { StyledProjectsPage } from "./ProjectsPage.style";
-import { PageMetadata } from "src/common/components";
-import { metadata } from "./ProjectsPage.metadata";
 
 const ProjectsPage: FC<ProjectsPageProps> = (props: ProjectsPageProps) => {
-  return (
-    <>
-      <PageMetadata {...metadata} />
-      <StyledProjectsPage {...props}>ProjectsPage</StyledProjectsPage>
-    </>
-  );
+  const dispatch = useAppDispatch();
+  dispatch(setMetadata(metadata));
+
+  return <StyledProjectsPage {...props}>ProjectsPage</StyledProjectsPage>;
 };
 
 ProjectsPage.defaultProps = defaultProps;

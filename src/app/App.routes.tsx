@@ -1,12 +1,12 @@
 import { Route } from "react-router-dom";
-import { AppLayout } from "./common/layouts";
+import { AppLayout } from "../common/layouts";
 import {
   BlogPage,
   HomePage,
   NotFoundPage,
   ProjectsPage,
   ComingSoonPage,
-} from "./pages";
+} from "../pages";
 
 export const appRoutes = (
   <Route element={<AppLayout />}>

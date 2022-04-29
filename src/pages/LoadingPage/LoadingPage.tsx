@@ -1,18 +1,19 @@
 import { FC } from "react";
 import { LoadingPageProps, defaultProps } from "./LoadingPage.props";
 import { StyledLoadingPage } from "./LoadingPage.style";
-import { PageMetadata } from "src/common/components";
-import { metadata } from "./LoadingPage.metadata";
 import { CircularProgress } from "@mui/material";
+import { useAppDispatch } from "src/app/hooks";
+import { setMetadata } from "src/features/PageMetadata/PageMetadata.slice";
+import { metadata } from "./LoadingPage.metadata";
 
 const LoadingPage: FC<LoadingPageProps> = (props: LoadingPageProps) => {
+  const dispatch = useAppDispatch();
+  dispatch(setMetadata(metadata));
+
   return (
-    <>
-      <PageMetadata {...metadata} withTitlePostfix={false} />
-      <StyledLoadingPage {...props}>
-        <CircularProgress />
-      </StyledLoadingPage>
-    </>
+    <StyledLoadingPage {...props}>
+      <CircularProgress />
+    </StyledLoadingPage>
   );
 };
 
