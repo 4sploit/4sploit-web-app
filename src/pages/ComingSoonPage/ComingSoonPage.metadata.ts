@@ -4,4 +4,5 @@ export const metadata: Metadata = {
   title: "Coming Soon",
   description: "Coming Soon!",
   robots: [Robots.NoFollow, Robots.NoIndex],
+  withAppTitle: false,
 };

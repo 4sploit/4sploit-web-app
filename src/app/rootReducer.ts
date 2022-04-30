@@ -1,6 +1,5 @@
 import { combineReducers } from "@reduxjs/toolkit";
-// eslint-disable-next-line max-len
-import pageMetadataReducer from "src/features/PageMetadata/PageMetadata.slice";
+import { pageMetadataReducer } from "src/features/PageMetadata";
 
 const rootReducer = combineReducers({
   pageMetadata: pageMetadataReducer,

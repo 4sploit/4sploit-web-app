@@ -1,6 +1,6 @@
-export { BlogPage } from "./BlogPage";
-export { HomePage } from "./HomePage";
-export { ProjectsPage } from "./ProjectsPage";
+export { LazyHomePage } from "./HomePage";
+export { LazyProjectsPage } from "./ProjectsPage";
+export { LazyBlogPage } from "./BlogPage";
 export { NotFoundPage } from "./NotFoundPage";
 export { ComingSoonPage } from "./ComingSoonPage";
 export { LoadingPage } from "./LoadingPage";

@@ -1,1 +1,3 @@
-export { default as BlogPage } from "./BlogPage";
+import { lazy } from "react";
+
+export const LazyBlogPage = lazy(() => import("./BlogPage"));

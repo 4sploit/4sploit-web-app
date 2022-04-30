@@ -2,14 +2,10 @@ import { FC } from "react";
 import { HomePageProps, defaultProps } from "./HomePage.props";
 import { StyledHomePage } from "./HomePage.style";
 import { Link } from "react-router-dom";
-import { useAppDispatch } from "src/app/hooks";
-import { setMetadata } from "src/features/PageMetadata/PageMetadata.slice";
 import { metadata } from "./HomePage.metadata";
+import { withPageMetadata } from "src/common/hocs";
 
 const HomePage: FC<HomePageProps> = (props: HomePageProps) => {
-  const dispatch = useAppDispatch();
-  dispatch(setMetadata(metadata));
-
   return (
     <>
       <StyledHomePage {...props}>
@@ -26,4 +22,4 @@ const HomePage: FC<HomePageProps> = (props: HomePageProps) => {
 
 HomePage.defaultProps = defaultProps;
 
-export default HomePage;
+export default withPageMetadata(HomePage, metadata);

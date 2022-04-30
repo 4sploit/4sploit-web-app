@@ -3,16 +3,12 @@ import { ComingSoonPageProps, defaultProps } from "./ComingSoonPage.props";
 import { StyledComingSoonPage } from "./ComingSoonPage.style";
 import { Box } from "@mui/material";
 import endlessCon from "src/assets/images/endless-constellation.svg";
-import { useAppDispatch } from "src/app/hooks";
-import { setMetadata } from "src/features/PageMetadata/PageMetadata.slice";
+import { withPageMetadata } from "src/common/hocs";
 import { metadata } from "./ComingSoonPage.metadata";
 
 const ComingSoonPage: FC<ComingSoonPageProps> = (
   props: ComingSoonPageProps
 ) => {
-  const dispatch = useAppDispatch();
-  dispatch(setMetadata(metadata));
-
   return (
     <>
       <StyledComingSoonPage {...props}>
@@ -42,4 +38,4 @@ const ComingSoonPage: FC<ComingSoonPageProps> = (
 
 ComingSoonPage.defaultProps = defaultProps;
 
-export default ComingSoonPage;
+export default withPageMetadata(ComingSoonPage, metadata);

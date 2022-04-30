@@ -1,2 +1,5 @@
 export { default as PageMetadata } from "./PageMetadata";
-export { default as pageMetadataReducer } from "./PageMetadata.slice";
+export {
+  default as pageMetadataReducer,
+  setMetadata,
+} from "./PageMetadata.slice";

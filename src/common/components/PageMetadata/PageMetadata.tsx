@@ -4,7 +4,7 @@ import { env } from "src/config/environment";
 import { defaultProps, PageMetadataProps } from "./PageMetadata.props";
 
 const PageMetadata: FC<PageMetadataProps> = (props: PageMetadataProps) => {
-  const { title, description, robots, withTitlePostfix } = {
+  const { title, description, robots, withAppTitle } = {
     ...defaultProps,
     ...props,
   };
@@ -12,7 +12,7 @@ const PageMetadata: FC<PageMetadataProps> = (props: PageMetadataProps) => {
   return (
     <Helmet prioritizeSeoTags>
       <title>
-        {`${title}`} {withTitlePostfix ? `| ${env.title}` : ""}
+        {`${title}`} {withAppTitle ? `| ${env.title}` : ""}
       </title>
       {description && <meta name="description" content={description} />}
       {robots?.length && <meta name="robots" content={robots.join(",")} />}

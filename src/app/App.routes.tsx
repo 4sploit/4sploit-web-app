@@ -1,18 +1,20 @@
 import { Route } from "react-router-dom";
-import { AppLayout } from "../common/layouts";
+import { AppLayout, LazyLayout } from "src/common/layouts";
 import {
-  BlogPage,
-  HomePage,
   NotFoundPage,
-  ProjectsPage,
   ComingSoonPage,
-} from "../pages";
+  LazyHomePage,
+  LazyBlogPage,
+  LazyProjectsPage,
+} from "src/pages";
 
 export const appRoutes = (
   <Route element={<AppLayout />}>
-    <Route path="/" element={<HomePage />} />
-    <Route path="/blog" element={<BlogPage />} />
-    <Route path="/projects" element={<ProjectsPage />} />
+    <Route element={<LazyLayout />}>
+      <Route path="/" element={<LazyHomePage />} />
+      <Route path="/blog" element={<LazyBlogPage />} />
+      <Route path="/projects" element={<LazyProjectsPage />} />
+    </Route>
     <Route path="*" element={<NotFoundPage />} />
   </Route>
 );

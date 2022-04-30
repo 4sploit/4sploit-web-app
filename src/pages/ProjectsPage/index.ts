@@ -1,1 +1,3 @@
-export { default as ProjectsPage } from "./ProjectsPage";
+import { lazy } from "react";
+
+export const LazyProjectsPage = lazy(() => import("./ProjectsPage"));
