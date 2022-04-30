@@ -1,4 +1,4 @@
-import { Route } from "react-router-dom";
+import { Navigate, Route } from "react-router-dom";
 import { AppLayout, LazyLayout } from "src/common/layouts";
 import {
   NotFoundPage,
@@ -20,5 +20,8 @@ export const appRoutes = (
 );
 
 export const comingSoonRoute = (
-  <Route path="*" element={<ComingSoonPage />} />
+  <>
+    <Route path="/" element={<ComingSoonPage />} />
+    <Route path="*" element={<Navigate to="/" replace />} />
+  </>
 );
