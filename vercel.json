@@ -4,16 +4,28 @@
       "source": "/(.*)",
       "headers": [
         {
-          "key": "X-Content-Type-Options",
+          "key": "x-content-type-options",
           "value": "nosniff"
         },
         {
-          "key": "X-Frame-Options",
+          "key": "x-frame-options",
           "value": "DENY"
         },
         {
-          "key": "X-XSS-Protection",
-          "value": "1; mode=block"
+          "key": "content-security-policy",
+          "value": "default-src 'self'; script-src 'self'"
+        },
+        {
+          "key": "cross-origin-resource-policy",
+          "value": "same-origin"
+        },
+        {
+          "key": "strict-transport-security",
+          "value": "max-age=31536000"
+        },
+        {
+          "key": "x-xss-protection",
+          "value": "0"
         }
       ]
     }
