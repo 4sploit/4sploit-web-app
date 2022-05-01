@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Helmet } from "react-helmet-async";
-import { env } from "src/config/environment";
+import { env } from "src/config";
 import { defaultProps, PageMetadataProps } from "./PageMetadata.props";
 
 const PageMetadata: FC<PageMetadataProps> = (props: PageMetadataProps) => {
