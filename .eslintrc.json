@@ -12,6 +12,8 @@
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:react-redux/recommended",
     "plugin:@typescript-eslint/recommended",
     "prettier"
   ],
@@ -23,7 +25,13 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "plugins": [
+    "react",
+    "react-hooks",
+    "react-redux",
+    "@typescript-eslint",
+    "prettier"
+  ],
   "rules": {
     "indent": "off",
     "quotes": ["error", "double"],
@@ -38,7 +46,10 @@
     "no-empty-function": "error",
     "react/react-in-jsx-scope": "off",
     "react/jsx-uses-vars": "error",
+    "react/jsx-pascal-case": "error",
     "prettier/prettier": ["error"],
-    "@typescript-eslint/no-empty-interface": "off"
+    "@typescript-eslint/no-empty-interface": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   }
 }

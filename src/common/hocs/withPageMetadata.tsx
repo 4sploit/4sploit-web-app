@@ -9,9 +9,10 @@ export const withPageMetadata = <P,>(
 ) => {
   const WrapperComponent: FC<P> = (props: P) => {
     const dispatch = useAppDispatch();
+
     useEffect(() => {
       dispatch(setMetadata(metadata));
-    }, []);
+    });
 
     return <WrappedComponent {...props} />;
   };
