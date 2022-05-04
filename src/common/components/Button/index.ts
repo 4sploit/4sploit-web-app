@@ -1,2 +1,3 @@
 export { default as Button } from "./Button";
-export { ButtonColors, ButtonVariants } from "./constants";
+export { IconButton } from "./components";
+export { ButtonStyles, ButtonVariants } from "./constants";

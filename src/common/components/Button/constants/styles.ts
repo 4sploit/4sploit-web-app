@@ -1,4 +1,4 @@
-const enum Colors {
+const enum Styles {
   Primary = "primary",
   Secondary = "secondary",
   Success = "success",
@@ -7,4 +7,4 @@ const enum Colors {
   Warning = "warning",
 }
 
-export default Colors;
+export default Styles;

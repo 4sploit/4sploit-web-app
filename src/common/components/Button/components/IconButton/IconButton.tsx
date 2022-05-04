@@ -6,7 +6,7 @@ const IconButton: FC<IconButtonProps> = ({
   id,
   className,
   disabled,
-  color,
+  style,
   icon,
   onClick,
 }) => {
@@ -15,7 +15,7 @@ const IconButton: FC<IconButtonProps> = ({
       id={id}
       className={className}
       disabled={disabled}
-      color={color}
+      style={style}
       onClick={onClick}>
       {icon}
     </StyledIconButton>

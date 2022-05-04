@@ -6,7 +6,7 @@ const Button: FC<ButtonProps> = ({
   id,
   className,
   disabled,
-  color,
+  style,
   variant,
   startIcon,
   endIcon,
@@ -18,7 +18,7 @@ const Button: FC<ButtonProps> = ({
       id={id}
       className={className}
       disabled={disabled}
-      color={color}
+      color={style}
       variant={variant}
       startIcon={startIcon}
       endIcon={endIcon}
