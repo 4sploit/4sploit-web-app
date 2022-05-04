@@ -1,15 +1,12 @@
-import { MouseEventHandler, ReactNode } from "react";
-import { ButtonStyles } from "../../constants";
+import { ReactNode } from "react";
+import { ButtonBaseProps } from "../../Button.props";
+import { ButtonColors } from "../../constants";
 
-export interface IconButtonProps {
-  id?: string;
-  className?: string;
-  disabled?: boolean;
-  style?: ButtonStyles;
+export interface IconButtonProps extends ButtonBaseProps {
+  color?: ButtonColors;
   icon: ReactNode;
-  onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
 export const defaultProps: Partial<IconButtonProps> = {
-  style: ButtonStyles.Primary,
+  color: ButtonColors.Primary,
 };
