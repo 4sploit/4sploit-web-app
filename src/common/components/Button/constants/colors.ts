@@ -5,6 +5,7 @@ const enum Colors {
   Error = "error",
   Info = "info",
   Warning = "warning",
+  Default = "inherit",
 }
 
 export default Colors;

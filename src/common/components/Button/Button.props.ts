@@ -17,6 +17,6 @@ export interface ButtonProps extends ButtonBaseProps {
 }
 
 export const defaultProps: Partial<ButtonProps> = {
-  color: ButtonColors.Primary,
+  color: ButtonColors.Default,
   variant: ButtonVariants.Text,
 };

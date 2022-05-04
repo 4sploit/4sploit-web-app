@@ -8,5 +8,5 @@ export interface IconButtonProps extends ButtonBaseProps {
 }
 
 export const defaultProps: Partial<IconButtonProps> = {
-  color: ButtonColors.Primary,
+  color: ButtonColors.Default,
 };
