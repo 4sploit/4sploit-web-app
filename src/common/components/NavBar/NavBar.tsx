@@ -4,7 +4,7 @@ import { IconButton } from "src/common/components/Button";
 import { NavBarProps, defaultProps } from "./NavBar.props";
 import MenuIcon from "@mui/icons-material/Menu";
 import {
-  ItemsContainer,
+  LogoLink,
   Menu,
   MenuItem,
   NavLink,
@@ -14,7 +14,7 @@ import {
 } from "./NavBar.style";
 import { Sizes } from "src/common/styles";
 
-const NavBar: FC<NavBarProps> = ({ links }) => {
+const NavBar: FC<NavBarProps> = ({ logo, links }) => {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.only(Sizes.Mobile));
@@ -27,21 +27,22 @@ const NavBar: FC<NavBarProps> = ({ links }) => {
     setAnchorElNav(null);
   };
 
-  const renderDesktopNavItems = () => {
+  const renderDesktopNavigationItems = () => {
     return (
-      <ItemsContainer>
+      <>
+        <LogoLink url="/">{logo}</LogoLink>
         {links?.map((link) => (
           <NavLink key={link.id} url={link.url}>
             {link.title}
           </NavLink>
         ))}
-      </ItemsContainer>
+      </>
     );
   };
 
-  const renderMobileNavItems = () => {
+  const renderMobileNavigationItems = () => {
     return (
-      <ItemsContainer>
+      <>
         <IconButton icon={<MenuIcon />} onClick={handleOpenNavMenu} />
         <Menu
           keepMounted
@@ -67,7 +68,7 @@ const NavBar: FC<NavBarProps> = ({ links }) => {
             </MenuItem>
           ))}
         </Menu>
-      </ItemsContainer>
+      </>
     );
   };
 
@@ -75,7 +76,9 @@ const NavBar: FC<NavBarProps> = ({ links }) => {
     <StyledNavBar>
       <ToolbarContainer>
         <Toolbar>
-          {isMobile ? renderMobileNavItems() : renderDesktopNavItems()}
+          {isMobile
+            ? renderMobileNavigationItems()
+            : renderDesktopNavigationItems()}
         </Toolbar>
       </ToolbarContainer>
     </StyledNavBar>
