@@ -58,10 +58,7 @@ const NavBar: FC<NavBarProps> = ({ Logo, links }) => {
             horizontal: "left",
           }}
           open={Boolean(anchorElNav)}
-          onClose={handleCloseNavMenu}
-          sx={{
-            display: { xs: "block", md: "none" },
-          }}>
+          onClose={handleCloseNavMenu}>
           {links?.map((link) => (
             <MenuItem key={link.id} onClick={handleCloseNavMenu}>
               <NavLink key={link.id} url={link.url}>
