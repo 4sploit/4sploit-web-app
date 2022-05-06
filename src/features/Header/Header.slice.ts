@@ -14,7 +14,7 @@ const initialState: Header = {
 };
 
 const headerSlice = createSlice({
-  name: "pageMetadata",
+  name: "header",
   initialState,
   reducers: {
     addLink(state, action: PayloadAction<Link>) {
