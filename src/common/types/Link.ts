@@ -1,6 +1,13 @@
-export interface Link {
+import { Link } from "react-router-dom";
+import { IconNames } from "../styles";
+import Targets from "./Targets";
+
+interface Link {
   id: string;
   title: string;
   url: string;
-  isExternal?: boolean;
+  icon?: IconNames;
+  target?: Targets;
 }
+
+export default Link;

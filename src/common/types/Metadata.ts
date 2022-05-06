@@ -1,8 +1,10 @@
-import { Robots } from "./Robots";
+import Robots from "./Robots";
 
-export interface Metadata {
+interface Metadata {
   title: string;
   description?: string;
   robots?: Robots[];
   withAppTitle?: boolean;
 }
+
+export default Metadata;

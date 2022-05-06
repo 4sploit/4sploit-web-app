@@ -14,7 +14,7 @@ import {
 } from "./NavBar.style";
 import { Sizes } from "src/common/styles";
 
-const NavBar: FC<NavBarProps> = ({ logo, links }) => {
+const NavBar: FC<NavBarProps> = ({ Logo, links }) => {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.only(Sizes.Mobile));
@@ -30,7 +30,9 @@ const NavBar: FC<NavBarProps> = ({ logo, links }) => {
   const renderDesktopNavigationItems = () => {
     return (
       <>
-        <LogoLink url="/">{logo}</LogoLink>
+        <LogoLink url="/">
+          <Logo />
+        </LogoLink>
         {links?.map((link) => (
           <NavLink key={link.id} url={link.url}>
             {link.title}

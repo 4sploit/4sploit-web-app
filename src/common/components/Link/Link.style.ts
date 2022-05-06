@@ -1,9 +1,9 @@
 import { Link as RouterLink } from "react-router-dom";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 interface StyledLinkProps {}
 
-export const StyledLink = styled(RouterLink)<StyledLinkProps>`
+const SharedStyle = css<StyledLinkProps>`
   text-decoration: none;
   font-size: ${({ theme }) =>
     theme.typography.pxToRem(theme.typography.fontSize)};
@@ -13,4 +13,12 @@ export const StyledLink = styled(RouterLink)<StyledLinkProps>`
   &:hover {
     text-decoration: underline;
   }
+`;
+
+export const StyledInternalLink = styled(RouterLink)<StyledLinkProps>`
+  ${SharedStyle}
+`;
+
+export const StyledExternalLink = styled.a<StyledLinkProps>`
+  ${SharedStyle}
 `;

@@ -1,11 +1,10 @@
-import { Facebook } from "@mui/icons-material";
 import ReactDOM from "react-dom/client";
-import NavBar from "./NavBar";
+import Footer from "./Footer";
 
-describe("<NavBar />", () => {
+describe("<Footer />", () => {
   it("should render without crashing", () => {
     const rootElement = document.createElement("div");
     const root = ReactDOM.createRoot(rootElement);
-    root.render(<NavBar Logo={Facebook} links={[]} />);
+    root.render(<Footer />);
   });
 });

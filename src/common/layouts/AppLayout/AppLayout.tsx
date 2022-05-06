@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Outlet } from "react-router-dom";
-import { Header } from "src/features";
+import { Footer, Header } from "src/features";
 import {
   FooterContainer,
   HeaderContainer,
@@ -17,7 +17,9 @@ const AppLayout: FC = () => {
       <MainContainer>
         <Outlet />
       </MainContainer>
-      <FooterContainer>{/* <Footer /> */}</FooterContainer>
+      <FooterContainer>
+        <Footer />
+      </FooterContainer>
     </Wrapper>
   );
 };
