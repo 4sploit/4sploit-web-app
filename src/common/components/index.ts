@@ -1,3 +1,4 @@
-export { Button } from "./Button";
-export { IconButton } from "./Button/components/IconButton";
+export { Button, IconButton } from "./Button";
 export { PageMetadata } from "./PageMetadata";
+export { Link } from "./Link";
+export { NavBar } from "./NavBar";
