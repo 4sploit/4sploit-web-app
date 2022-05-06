@@ -14,7 +14,7 @@ export const AppTheme: Theme = createTheme({
   },
   typography: {
     fontFamily: "Space Grotesk, sans-serif",
-    fontSize: 14,
+    fontSize: 15,
   },
   components: {
     MuiButtonBase: {
