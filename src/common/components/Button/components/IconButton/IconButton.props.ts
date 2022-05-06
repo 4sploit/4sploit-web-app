@@ -1,12 +1,12 @@
 import { ReactNode } from "react";
+import { Colors } from "src/common/styles";
 import { ButtonBaseProps } from "../../Button.props";
-import { ButtonColors } from "../../constants";
 
 export interface IconButtonProps extends ButtonBaseProps {
-  color?: ButtonColors;
+  color?: Colors;
   icon: ReactNode;
 }
 
 export const defaultProps: Partial<IconButtonProps> = {
-  color: ButtonColors.Default,
+  color: Colors.Default,
 };

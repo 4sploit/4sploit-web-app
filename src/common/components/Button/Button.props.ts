@@ -1,5 +1,5 @@
 import { MouseEventHandler, ReactNode } from "react";
-import { ButtonColors, ButtonVariants } from "./constants";
+import { Colors, Variants } from "src/common/styles";
 
 export interface ButtonBaseProps {
   id?: string;
@@ -9,14 +9,14 @@ export interface ButtonBaseProps {
 }
 
 export interface ButtonProps extends ButtonBaseProps {
-  color?: ButtonColors;
-  variant?: ButtonVariants;
+  color?: Colors;
+  variant?: Variants;
   startIcon?: ReactNode;
   endIcon?: ReactNode;
   children: ReactNode;
 }
 
 export const defaultProps: Partial<ButtonProps> = {
-  color: ButtonColors.Default,
-  variant: ButtonVariants.Text,
+  color: Colors.Default,
+  variant: Variants.Text,
 };
