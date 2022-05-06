@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import { Link } from "src/common/types";
 
 interface Header {
@@ -16,18 +16,7 @@ const initialState: Header = {
 const headerSlice = createSlice({
   name: "header",
   initialState,
-  reducers: {
-    addLink(state, action: PayloadAction<Link>) {
-      state.links.push(action.payload);
-    },
-    deleteLink(state, action: PayloadAction<Link>) {
-      const filteredLinks = state.links.filter(
-        (link) => link.id !== action.payload.id
-      );
-      state.links = filteredLinks;
-    },
-  },
+  reducers: {},
 });
 
-export const { addLink, deleteLink } = headerSlice.actions;
 export default headerSlice.reducer;
