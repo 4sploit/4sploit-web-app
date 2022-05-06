@@ -8,22 +8,26 @@ import { env } from "src/config";
 import { Provider } from "react-redux";
 import store from "./store";
 import { PageMetadata } from "src/features/PageMetadata";
+import { CssBaseline, StyledEngineProvider } from "@mui/material";
 
 const App = () => {
   return (
     <Provider store={store}>
       <HelmetProvider>
         <PageMetadata />
-        <MuiThemeProvider theme={AppTheme}>
-          <ThemeProvider theme={AppTheme}>
-            <GlobalStyle />
-            <BrowserRouter>
-              <Routes>
-                {env.isUnderConstruction ? comingSoonRoute : appRoutes}
-              </Routes>
-            </BrowserRouter>
-          </ThemeProvider>
-        </MuiThemeProvider>
+        <StyledEngineProvider injectFirst>
+          <MuiThemeProvider theme={AppTheme}>
+            <ThemeProvider theme={AppTheme}>
+              <CssBaseline />
+              <GlobalStyle />
+              <BrowserRouter>
+                <Routes>
+                  {env.isUnderConstruction ? comingSoonRoute : appRoutes}
+                </Routes>
+              </BrowserRouter>
+            </ThemeProvider>
+          </MuiThemeProvider>
+        </StyledEngineProvider>
       </HelmetProvider>
     </Provider>
   );
