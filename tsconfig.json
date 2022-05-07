@@ -16,7 +16,7 @@
     "noEmit": true,
     "experimentalDecorators": true,
     "jsx": "react-jsx",
-    "baseUrl": ".",
+    "baseUrl": "src",
     "typeRoots": ["node_modules/@types", "typings"]
   },
   "include": ["src"]

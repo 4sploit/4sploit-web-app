@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Targets } from "src/common/types";
+import { Targets } from "common/types";
 
 export interface LinkProps {
   id?: string;

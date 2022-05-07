@@ -1,4 +1,4 @@
-import { LoadingPage } from "src/pages";
+import { LoadingPage } from "pages";
 
 export interface LazyLayoutProps {
   loadingComponent?: JSX.Element;

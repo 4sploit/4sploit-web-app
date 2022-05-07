@@ -1,6 +1,6 @@
 import { FC, useEffect } from "react";
-import { useAppDispatch } from "src/app/hooks";
-import { setMetadata } from "src/features/PageMetadata";
+import { useAppDispatch } from "app/hooks";
+import { setMetadata } from "features/PageMetadata";
 import { Metadata } from "../types";
 
 export const withPageMetadata = <P,>(

@@ -3,11 +3,11 @@ import { BrowserRouter, Routes } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { appRoutes, comingSoonRoute } from "./App.routes";
 import { HelmetProvider } from "react-helmet-async";
-import { AppTheme, GlobalStyle } from "src/common/styles";
-import { env } from "src/config";
+import { AppTheme, GlobalStyle } from "common/styles";
+import { env } from "config";
 import { Provider } from "react-redux";
 import store from "./store";
-import { PageMetadata } from "src/features/PageMetadata";
+import { PageMetadata } from "features/PageMetadata";
 import { CssBaseline, StyledEngineProvider } from "@mui/material";
 
 const App = () => {

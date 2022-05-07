@@ -1,6 +1,6 @@
 import { useMediaQuery, useTheme } from "@mui/material";
 import { FC, useState } from "react";
-import { IconButton } from "src/common/components/Button";
+import { IconButton } from "common/components/Button";
 import { NavBarProps, defaultProps } from "./NavBar.props";
 import MenuIcon from "@mui/icons-material/Menu";
 import {
@@ -12,7 +12,7 @@ import {
   Toolbar,
   ToolbarContainer,
 } from "./NavBar.style";
-import { Sizes } from "src/common/styles";
+import { Sizes } from "common/styles";
 
 const NavBar: FC<NavBarProps> = ({ Logo, links }) => {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);

@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { Link } from "src/common/types";
+import { Link } from "common/types";
 
 interface Header {
   links: Array<Link>;

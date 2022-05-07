@@ -3,7 +3,7 @@ import { HomePageProps, defaultProps } from "./HomePage.props";
 import { StyledHomePage } from "./HomePage.style";
 import { Link } from "react-router-dom";
 import { metadata } from "./HomePage.metadata";
-import { withPageMetadata } from "src/common/hocs";
+import { withPageMetadata } from "common/hocs";
 
 const HomePage: FC<HomePageProps> = (props: HomePageProps) => {
   return (

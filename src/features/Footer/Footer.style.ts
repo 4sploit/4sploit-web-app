@@ -1,6 +1,6 @@
 import { SvgIcon } from "@mui/material";
-import { Link } from "src/common/components";
-import { Sizes } from "src/common/styles";
+import { Link } from "common/components";
+import { Sizes } from "common/styles";
 import styled from "styled-components";
 
 interface Props {}

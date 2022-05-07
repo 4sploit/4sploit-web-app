@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Outlet } from "react-router-dom";
-import { Footer, Header } from "src/features";
+import { Footer, Header } from "features";
 import {
   FooterContainer,
   HeaderContainer,

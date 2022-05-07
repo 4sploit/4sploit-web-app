@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { Metadata } from "src/common/types";
+import { Metadata } from "common/types";
 
 const defaultMetadata: Metadata = {
   title: "default",

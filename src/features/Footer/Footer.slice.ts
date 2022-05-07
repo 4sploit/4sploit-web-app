@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { IconNames } from "src/common/styles";
-import { Link, Targets } from "src/common/types";
+import { IconNames } from "common/styles";
+import { Link, Targets } from "common/types";
 
 interface Footer {
   externalLinks: Array<Link>;

@@ -4,7 +4,7 @@ import {
   SvgIconComponent as MaterialSvgIconComponent,
 } from "@mui/icons-material";
 import { FunctionComponent } from "react";
-import { ReactComponent as Logo } from "src/assets/images/logo.svg";
+import { ReactComponent as Logo } from "assets/images/logo.svg";
 import { IconNames } from "../constants";
 
 type SvgIconComponent =

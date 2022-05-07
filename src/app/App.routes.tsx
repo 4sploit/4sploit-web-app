@@ -1,12 +1,12 @@
 import { Navigate, Route } from "react-router-dom";
-import { AppLayout, LazyLayout } from "src/common/layouts";
+import { AppLayout, LazyLayout } from "common/layouts";
 import {
   NotFoundPage,
   ComingSoonPage,
   LazyHomePage,
   LazyBlogPage,
   LazyProjectsPage,
-} from "src/pages";
+} from "pages";
 
 export const appRoutes = (
   <Route element={<AppLayout />}>

@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { urlUtil } from "src/common/utils";
+import { urlUtil } from "common/utils";
 import { defaultProps, LinkProps } from "./Link.props";
 import { StyledExternalLink, StyledInternalLink } from "./Link.style";
 

@@ -2,8 +2,8 @@ import { FC } from "react";
 import { ComingSoonPageProps, defaultProps } from "./ComingSoonPage.props";
 import { StyledComingSoonPage } from "./ComingSoonPage.style";
 import { Box } from "@mui/material";
-import endlessCon from "src/assets/images/endless-constellation.svg";
-import { withPageMetadata } from "src/common/hocs";
+import endlessCon from "assets/images/endless-constellation.svg";
+import { withPageMetadata } from "common/hocs";
 import { metadata } from "./ComingSoonPage.metadata";
 
 const ComingSoonPage: FC<ComingSoonPageProps> = (

@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { withPageMetadata } from "src/common/hocs";
+import { withPageMetadata } from "common/hocs";
 import { metadata } from "./BlogPage.metadata";
 import { BlogPageProps, defaultProps } from "./BlogPage.props";
 import { StyledBlogPage } from "./BlogPage.style";
