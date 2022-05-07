@@ -1,5 +1,5 @@
 export interface EnvConfig {
-  environment: string | undefined;
+  environment: string;
   isUnderConstruction: boolean;
-  title: string | undefined;
+  title: string;
 }
