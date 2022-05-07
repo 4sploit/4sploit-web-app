@@ -7,9 +7,8 @@ interface Header {
 
 const initialState: Header = {
   links: [
-    { id: "1", title: "Home", url: "/" },
-    { id: "2", title: "projects", url: "projects" },
-    { id: "3", title: "blog", url: "blog" },
+    { id: "1", title: "projects", url: "projects" },
+    { id: "2", title: "blog", url: "blog" },
   ],
 };
 
