@@ -1,12 +1,12 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Metadata } from "src/common/types";
 
-const defaultMetdata: Metadata = {
+const defaultMetadata: Metadata = {
   title: "default",
 };
 
 const initialState = {
-  metdata: defaultMetdata,
+  metdata: defaultMetadata,
 };
 
 const pageMetadataSlice = createSlice({
