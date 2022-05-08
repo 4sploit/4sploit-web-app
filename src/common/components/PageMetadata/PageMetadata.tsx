@@ -3,12 +3,12 @@ import { Helmet } from "react-helmet-async";
 import { env } from "config";
 import { defaultProps, PageMetadataProps } from "./PageMetadata.props";
 
-const PageMetadata: FC<PageMetadataProps> = (props: PageMetadataProps) => {
-  const { title, description, robots, withAppTitle } = {
-    ...defaultProps,
-    ...props,
-  };
-
+const PageMetadata: FC<PageMetadataProps> = ({
+  title,
+  description,
+  robots,
+  withAppTitle,
+}) => {
   return (
     <Helmet prioritizeSeoTags>
       <title>
@@ -19,5 +19,7 @@ const PageMetadata: FC<PageMetadataProps> = (props: PageMetadataProps) => {
     </Helmet>
   );
 };
+
+PageMetadata.defaultProps = defaultProps;
 
 export default PageMetadata;
