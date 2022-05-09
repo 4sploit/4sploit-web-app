@@ -3,11 +3,7 @@ import { TemplateNameProps, defaultProps } from "./TemplateName.props";
 import { StyledTemplateName } from "./TemplateName.style";
 
 const TemplateName: FC<TemplateNameProps> = (props: TemplateNameProps) => {
-  return (
-    <StyledTemplateName {...props}>
-      TemplateName Component
-    </StyledTemplateName>
-  );
+  return <StyledTemplateName {...props}></StyledTemplateName>;
 };
 
 TemplateName.defaultProps = defaultProps;
