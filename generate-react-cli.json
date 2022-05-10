@@ -60,12 +60,14 @@
       "withTest": true,
       "withIndex": true,
       "withProps": true,
+      "withSlice": true,
       "customTemplates": {
         "component": "src/common/templates/default/TemplateName.tsx",
         "index": "src/common/templates/default/index.ts",
         "test": "src/common/templates/default/TemplateName.test.tsx",
         "style": "src/common/templates/default/TemplateName.style.ts",
-        "props": "src/common/templates/default/TemplateName.props.ts"
+        "props": "src/common/templates/default/TemplateName.props.ts",
+        "slice": "src/common/templates/feature/TemplateName.slice.ts"
       }
     }
   },
