@@ -7,9 +7,9 @@ import { FunctionComponent } from "react";
 import { ReactComponent as Logo } from "assets/images/logo.svg";
 
 enum IconNames {
-  LinkedIn = "linkedIn",
-  Github = "github",
-  Logo = "logo",
+  LinkedIn = "LINKEDIN",
+  Github = "GITHUB",
+  Logo = "LOGO",
 }
 
 type SvgIconComponent =
