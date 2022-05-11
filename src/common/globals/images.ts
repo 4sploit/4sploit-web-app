@@ -9,7 +9,7 @@ type Images = {
 };
 
 const Images: Images = {
-  [ImageNames.Photo]: `${env.imagesPath}/${ImageNames.Photo}`,
+  [ImageNames.Photo]: `${env.assetsPath}/images/${ImageNames.Photo}`,
 };
 
 export { Images, ImageNames };
