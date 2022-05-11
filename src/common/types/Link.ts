@@ -9,6 +9,7 @@ interface Link {
   url: string;
   icon?: IconNames;
   target?: Targets;
+  isExternal?: boolean;
 }
 
 export default Link;

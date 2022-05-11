@@ -1,14 +1,11 @@
 import { FC } from "react";
-import { urlUtil } from "common/utils";
 import { defaultProps, LinkProps } from "./Link.props";
 import { StyledExternalLink, StyledInternalLink } from "./Link.style";
 
-const Link: FC<LinkProps> = ({ url, children, ...rest }) => {
-  const isExternalUrl = urlUtil.isExternalUrl(url);
-
+const Link: FC<LinkProps> = ({ url, children, isExternal, ...rest }) => {
   return (
     <>
-      {isExternalUrl ? (
+      {isExternal ? (
         <StyledExternalLink href={url} {...rest}>
           {children}
         </StyledExternalLink>

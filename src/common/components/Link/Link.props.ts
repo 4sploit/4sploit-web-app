@@ -7,6 +7,7 @@ export interface LinkProps {
   url: string;
   target?: Targets;
   children: ReactNode;
+  isExternal?: boolean;
 }
 
 export const defaultProps: Partial<LinkProps> = {};

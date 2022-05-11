@@ -61,7 +61,11 @@ const NavBar: FC<NavBarProps> = ({ Logo, links }) => {
           onClose={handleCloseNavMenu}>
           {links?.map((link) => (
             <MenuItem key={link.id} onClick={handleCloseNavMenu}>
-              <NavLink key={link.id} url={link.url}>
+              <NavLink
+                key={link.id}
+                url={link.url}
+                target={link.target}
+                isExternal={link.isExternal}>
                 {link.title}
               </NavLink>
             </MenuItem>

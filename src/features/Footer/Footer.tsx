@@ -24,7 +24,8 @@ const Footer: FC<FooterProps> = () => {
             <ExternalLink
               key={link.id}
               url={link.url}
-              target={link.target}>
+              target={link.target}
+              isExternal={link.isExternal}>
               {link.icon && <StyledSvgIcon as={Icons[link.icon]} />}
             </ExternalLink>
           ))}
