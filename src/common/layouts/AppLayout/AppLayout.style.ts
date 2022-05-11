@@ -1,5 +1,5 @@
 import { Container } from "@mui/material";
-import { Sizes } from "common/styles";
+import { Sizes } from "common/globals";
 import styled from "styled-components";
 
 interface Props {}

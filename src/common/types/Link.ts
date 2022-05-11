@@ -1,5 +1,6 @@
+import { IconNames } from "common/globals";
 import { Link } from "react-router-dom";
-import { IconNames } from "../styles";
+
 import Targets from "./Targets";
 
 interface Link {

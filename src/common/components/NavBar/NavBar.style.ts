@@ -4,7 +4,7 @@ import {
   Menu as MaterialMenu,
   MenuItem as MaterialMenuItem,
 } from "@mui/material";
-import { Sizes } from "common/styles";
+import { Sizes } from "common/globals";
 import styled from "styled-components";
 import { Link } from "../Link";
 

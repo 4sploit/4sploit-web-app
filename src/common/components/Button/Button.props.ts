@@ -1,5 +1,5 @@
 import { MouseEventHandler, ReactNode } from "react";
-import { Colors, Variants } from "common/styles";
+import { Colors, Variants } from "common/globals";
 
 export interface ButtonBaseProps {
   id?: string;

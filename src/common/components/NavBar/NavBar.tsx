@@ -12,7 +12,7 @@ import {
   Toolbar,
   ToolbarContainer,
 } from "./NavBar.style";
-import { Sizes } from "common/styles";
+import { Sizes } from "common/globals";
 
 const NavBar: FC<NavBarProps> = ({ Logo, links }) => {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);

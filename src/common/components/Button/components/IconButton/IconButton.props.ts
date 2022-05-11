@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Colors } from "common/styles";
+import { Colors } from "common/globals";
 import { ButtonBaseProps } from "common/components/Button/Button.props";
 
 export interface IconButtonProps extends ButtonBaseProps {

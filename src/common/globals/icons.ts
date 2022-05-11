@@ -5,7 +5,12 @@ import {
 } from "@mui/icons-material";
 import { FunctionComponent } from "react";
 import { ReactComponent as Logo } from "assets/images/logo.svg";
-import { IconNames } from "../constants";
+
+enum IconNames {
+  LinkedIn = "linkedIn",
+  Github = "github",
+  Logo = "logo",
+}
 
 type SvgIconComponent =
   | FunctionComponent<React.SVGProps<SVGSVGElement>>
@@ -21,4 +26,4 @@ const Icons: Icons = {
   [IconNames.Logo]: Logo,
 };
 
-export default Icons;
+export { Icons, IconNames };

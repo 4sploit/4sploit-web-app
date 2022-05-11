@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { useAppSelector } from "app/hooks";
-import { Icons } from "common/styles";
+import { Icons } from "common/globals";
 import { FooterProps, defaultProps } from "./Footer.props";
 import {
   Container,

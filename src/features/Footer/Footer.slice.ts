@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { IconNames } from "common/styles";
+import { IconNames } from "common/globals";
 import { Link, Targets } from "common/types";
 
 interface Footer {
