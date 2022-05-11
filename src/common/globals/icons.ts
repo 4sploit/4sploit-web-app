@@ -1,6 +1,7 @@
 import {
   GitHub,
   LinkedIn,
+  Phone,
   SvgIconComponent as MaterialSvgIconComponent,
 } from "@mui/icons-material";
 import { FunctionComponent } from "react";
@@ -10,6 +11,7 @@ enum IconNames {
   LinkedIn = "LINKEDIN",
   Github = "GITHUB",
   Logo = "LOGO",
+  Phone = "PHONE",
 }
 
 type SvgIconComponent =
@@ -24,6 +26,7 @@ const Icons: Icons = {
   [IconNames.LinkedIn]: LinkedIn,
   [IconNames.Github]: GitHub,
   [IconNames.Logo]: Logo,
+  [IconNames.Phone]: Phone,
 };
 
 export { Icons, IconNames };
