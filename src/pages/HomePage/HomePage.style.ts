@@ -1,5 +1,5 @@
 import styled from "styled-components";
 
-interface StyledHomePageProps {}
+interface Props {}
 
-export const StyledHomePage = styled.div<StyledHomePageProps>``;
+export const Container = styled.div<Props>``;
