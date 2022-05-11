@@ -14,17 +14,19 @@ export const Wrapper = styled.div<Props>`
 export const HeaderContainer = styled(Container)<Props>``;
 
 export const MainContainer = styled(Container)<Props>`
-  margin-top: 4rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
   word-break: break-word;
   max-width: ${({ theme }) =>
     theme.typography.pxToRem(theme.breakpoints.values.desktop)};
   ${({ theme }) => theme.breakpoints.up(Sizes.Tablet)} {
-    margin-top: 6rem;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
   }
 `;
 
 export const FooterContainer = styled(Container)<Props>`
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   background-color: #272727;
