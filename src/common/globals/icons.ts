@@ -17,7 +17,7 @@ type SvgIconComponent =
   | MaterialSvgIconComponent;
 
 type Icons = {
-  [iconName: string]: SvgIconComponent;
+  [iconName in IconNames]: SvgIconComponent;
 };
 
 const Icons: Icons = {
