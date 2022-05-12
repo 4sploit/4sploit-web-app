@@ -1,12 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { IconNames } from "common/globals";
 import { Link, Targets } from "common/types";
+import { env } from "config";
 
 interface Footer {
+  ownerName: string;
   externalLinks: Array<Link>;
 }
 
 const initialState: Footer = {
+  ownerName: env.ownerName || "",
   externalLinks: [
     {
       id: "1",

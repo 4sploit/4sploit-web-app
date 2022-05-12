@@ -14,13 +14,12 @@ import {
 
 const Footer: FC<FooterProps> = () => {
   const footerStore = useAppSelector((state) => state.footer);
-  const externalLinks = footerStore.externalLinks;
 
   return (
     <StyledFooter>
       <Container>
         <ExternalLinksContainer>
-          {externalLinks.map((link) => (
+          {footerStore.externalLinks.map((link) => (
             <ExternalLink
               key={link.id}
               url={link.url}
@@ -32,7 +31,7 @@ const Footer: FC<FooterProps> = () => {
         </ExternalLinksContainer>
         <CopyrightContainer>
           <CopyrightText>
-            4sploit © {new Date().getFullYear()}
+            {footerStore.ownerName} © {new Date().getFullYear()}
           </CopyrightText>
         </CopyrightContainer>
       </Container>
