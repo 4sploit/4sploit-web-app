@@ -1,12 +1,20 @@
 import { Link } from "common/components";
 import { Sizes } from "common/globals";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 interface Props {}
+
+const SharedTextAlignmentStyle = css<Props>`
+  text-align: center;
+  ${({ theme }) => theme.breakpoints.up(Sizes.Laptop)} {
+    text-align: left;
+  }
+`;
 
 export const Container = styled.div<Props>`
   display: flex;
   flex-direction: column;
+  row-gap: 1rem;
   ${({ theme }) => theme.breakpoints.up(Sizes.Laptop)} {
     flex-direction: row;
     column-gap: 2rem;
@@ -36,10 +44,12 @@ export const InfoContainer = styled.div<Props>`
 
 export const Specialty = styled.h3<Props>`
   margin: 0;
+  ${SharedTextAlignmentStyle}
 `;
 
 export const Name = styled.h1<Props>`
   margin: 0;
+  ${SharedTextAlignmentStyle}
 `;
 
 export const Description = styled.p<Props>``;
@@ -50,6 +60,10 @@ export const ActionsContainer = styled.div<Props>`
   column-gap: 1rem;
   row-gap: 1rem;
   flex-wrap: wrap;
+  justify-content: center;
+  ${({ theme }) => theme.breakpoints.up(Sizes.Laptop)} {
+    justify-content: left;
+  }
 `;
 
 export const ActionLink = styled(Link)<Props>`
