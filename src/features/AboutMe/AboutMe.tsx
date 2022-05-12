@@ -3,13 +3,13 @@ import { FC } from "react";
 import { AboutMeProps, defaultProps } from "./AboutMe.props";
 import {
   ActionLink,
+  ActionsContainer,
   Container,
   Description,
-  InfoActionsContainer,
   InfoContainer,
   Name,
-  PersonalPhoto,
-  PersonalPhotoContainer,
+  Photo,
+  PhotoContainer,
   Specialty,
 } from "./AboutMe.style";
 
@@ -18,14 +18,14 @@ const AboutMe: FC<AboutMeProps> = () => {
 
   return (
     <Container>
-      <PersonalPhotoContainer>
-        <PersonalPhoto src={aboutMe.photo} alt={aboutMe.name} />
-      </PersonalPhotoContainer>
+      <PhotoContainer>
+        <Photo src={aboutMe.photo} alt={aboutMe.name} />
+      </PhotoContainer>
       <InfoContainer>
         <Name>{aboutMe.name}</Name>
         <Specialty>{aboutMe.speciality}</Specialty>
         <Description>{aboutMe.description}</Description>
-        <InfoActionsContainer>
+        <ActionsContainer>
           {aboutMe.actions.map((action) => (
             <ActionLink
               key={action.id}
@@ -35,7 +35,7 @@ const AboutMe: FC<AboutMeProps> = () => {
               {action.title}
             </ActionLink>
           ))}
-        </InfoActionsContainer>
+        </ActionsContainer>
       </InfoContainer>
     </Container>
   );

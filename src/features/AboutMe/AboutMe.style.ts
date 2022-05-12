@@ -13,12 +13,12 @@ export const Container = styled.div<Props>`
   }
 `;
 
-export const PersonalPhotoContainer = styled.div<Props>`
+export const PhotoContainer = styled.div<Props>`
   display: flex;
   justify-content: center;
 `;
 
-export const PersonalPhoto = styled.img<Props>`
+export const Photo = styled.img<Props>`
   border-radius: 50%;
   width: 18.75rem;
   height: 18.75rem;
@@ -44,7 +44,7 @@ export const Name = styled.h1<Props>`
 
 export const Description = styled.p<Props>``;
 
-export const InfoActionsContainer = styled.div<Props>`
+export const ActionsContainer = styled.div<Props>`
   display: flex;
   flex-direction: row;
   column-gap: 1rem;
