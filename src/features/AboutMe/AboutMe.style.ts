@@ -19,7 +19,7 @@ export const PhotoContainer = styled.div<Props>`
 `;
 
 export const Photo = styled.img<Props>`
-  border-radius: 50%;
+  border: 0.313rem solid white;
   width: 18.75rem;
   height: 18.75rem;
   ${({ theme }) => theme.breakpoints.up(Sizes.Laptop)} {
