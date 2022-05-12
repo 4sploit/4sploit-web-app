@@ -1,11 +1,8 @@
-import { SvgIconComponent } from "@mui/icons-material";
-import { FunctionComponent } from "react";
 import { Link } from "common/types";
+import { IconNames } from "common/globals";
 
 export interface NavBarProps {
-  Logo:
-    | FunctionComponent<React.SVGProps<SVGSVGElement>>
-    | SvgIconComponent;
+  logo: IconNames;
   links: Array<Link>;
 }
 
