@@ -1,16 +1,39 @@
 import {
-  AppBar,
-  Container,
   Menu as MaterialMenu,
   MenuItem as MaterialMenuItem,
+  SvgIcon,
 } from "@mui/material";
 import { Sizes } from "common/globals";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Link } from "../Link";
 
 interface Props {}
 
-export const StyledNavBar = styled(AppBar)<Props>``;
+const SharedNavItemsStyle = css<Props>`
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+`;
+
+export const StyledNavBar = styled.div<Props>`
+  display: flex;
+`;
+
+export const DesktopNavItemsContainer = styled.div<Props>`
+  ${SharedNavItemsStyle}
+`;
+
+export const MobileNavItemsContainer = styled.div<Props>`
+  ${SharedNavItemsStyle}
+`;
+
+export const LinksContainer = styled.div<Props>`
+  display: flex;
+`;
+
+export const NavMenuContainer = styled.div<Props>`
+  display: flex;
+`;
 
 export const NavLink = styled(Link)<Props>`
   line-height: 2.2;
@@ -30,15 +53,15 @@ export const NavLink = styled(Link)<Props>`
 
 export const LogoLink = styled(Link)<Props>``;
 
-export const ToolbarContainer = styled(Container)<Props>`
-  max-width: ${({ theme }) =>
-    theme.typography.pxToRem(theme.breakpoints.values.desktop)};
-`;
-
-export const Toolbar = styled.div<Props>`
-  display: flex;
-`;
-
 export const Menu = styled(MaterialMenu)<Props>``;
 
 export const MenuItem = styled(MaterialMenuItem)<Props>``;
+
+export const StyledSvgIcon = styled(SvgIcon)<Props>`
+  width: 35pt;
+  height: 35pt;
+  ${({ theme }) => theme.breakpoints.up(Sizes.Tablet)} {
+    width: 45pt;
+    height: 45pt;
+  }
+`;

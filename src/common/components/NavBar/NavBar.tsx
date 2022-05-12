@@ -2,22 +2,25 @@ import { useMediaQuery, useTheme } from "@mui/material";
 import { FC, useState } from "react";
 import { IconButton } from "common/components/Button";
 import { NavBarProps, defaultProps } from "./NavBar.props";
-import MenuIcon from "@mui/icons-material/Menu";
 import {
+  DesktopNavItemsContainer,
+  LinksContainer,
   LogoLink,
   Menu,
   MenuItem,
+  MobileNavItemsContainer,
   NavLink,
+  NavMenuContainer,
   StyledNavBar,
-  Toolbar,
-  ToolbarContainer,
+  StyledSvgIcon,
 } from "./NavBar.style";
-import { Sizes } from "common/globals";
+import { IconNames, Icons, Sizes } from "common/globals";
 
-const NavBar: FC<NavBarProps> = ({ Logo, links }) => {
+const NavBar: FC<NavBarProps> = ({ logo, links }) => {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.only(Sizes.Mobile));
+  const Logo = Icons[logo];
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -29,61 +32,64 @@ const NavBar: FC<NavBarProps> = ({ Logo, links }) => {
 
   const renderDesktopNavigationItems = () => {
     return (
-      <>
+      <DesktopNavItemsContainer>
         <LogoLink url="/">
-          <Logo />
+          <StyledSvgIcon as={Logo} />
         </LogoLink>
-        {links?.map((link) => (
-          <NavLink key={link.id} url={link.url}>
-            {link.title}
-          </NavLink>
-        ))}
-      </>
+        <LinksContainer>
+          {links?.map((link) => (
+            <NavLink key={link.id} url={link.url}>
+              {link.title}
+            </NavLink>
+          ))}
+        </LinksContainer>
+      </DesktopNavItemsContainer>
     );
   };
 
   const renderMobileNavigationItems = () => {
     return (
-      <>
-        <IconButton icon={<MenuIcon />} onClick={handleOpenNavMenu} />
-        <Menu
-          keepMounted
-          anchorEl={anchorElNav}
-          anchorOrigin={{
-            vertical: "bottom",
-            horizontal: "left",
-          }}
-          transformOrigin={{
-            vertical: "top",
-            horizontal: "left",
-          }}
-          open={Boolean(anchorElNav)}
-          onClose={handleCloseNavMenu}>
-          {links?.map((link) => (
-            <MenuItem key={link.id} onClick={handleCloseNavMenu}>
-              <NavLink
-                key={link.id}
-                url={link.url}
-                target={link.target}
-                isExternal={link.isExternal}>
-                {link.title}
-              </NavLink>
-            </MenuItem>
-          ))}
-        </Menu>
-      </>
+      <MobileNavItemsContainer>
+        <LogoLink url="/">
+          <StyledSvgIcon as={Logo} />
+        </LogoLink>
+        <NavMenuContainer>
+          <IconButton icon={IconNames.Menu} onClick={handleOpenNavMenu} />
+          <Menu
+            keepMounted
+            anchorEl={anchorElNav}
+            anchorOrigin={{
+              vertical: "bottom",
+              horizontal: "left",
+            }}
+            transformOrigin={{
+              vertical: "top",
+              horizontal: "left",
+            }}
+            open={Boolean(anchorElNav)}
+            onClose={handleCloseNavMenu}>
+            {links?.map((link) => (
+              <MenuItem key={link.id} onClick={handleCloseNavMenu}>
+                <NavLink
+                  key={link.id}
+                  url={link.url}
+                  target={link.target}
+                  isExternal={link.isExternal}>
+                  {link.title}
+                </NavLink>
+              </MenuItem>
+            ))}
+          </Menu>
+        </NavMenuContainer>
+      </MobileNavItemsContainer>
     );
   };
 
   return (
     <StyledNavBar>
-      <ToolbarContainer>
-        <Toolbar>
-          {isMobile
-            ? renderMobileNavigationItems()
-            : renderDesktopNavigationItems()}
-        </Toolbar>
-      </ToolbarContainer>
+      {isMobile
+        ? renderMobileNavigationItems()
+        : renderDesktopNavigationItems()}
     </StyledNavBar>
   );
 };
