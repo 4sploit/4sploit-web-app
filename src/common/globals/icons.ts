@@ -13,7 +13,7 @@ enum IconNames {
   Github = "GITHUB",
   Logo = "LOGO",
   Phone = "PHONE",
-  Menu = "Menu",
+  Menu = "MENU",
 }
 
 type SvgIconComponent =
