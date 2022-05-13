@@ -72,7 +72,6 @@ export const ActionLink = styled(Link)<Props>`
   border-radius: 1.875rem;
   background-color: #121212;
   &:hover {
-    text-decoration: none;
     border: 0.125rem solid black;
     background-color: white;
     color: #121212;

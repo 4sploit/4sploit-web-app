@@ -43,7 +43,6 @@ export const NavLink = styled(Link)<Props>`
     color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   &:hover {
     background-color: rgba(255, 255, 255, 0.08);
-    text-decoration: none;
   }
 
   ${({ theme }) => theme.breakpoints.up(Sizes.Tablet)} {

@@ -33,11 +33,7 @@ export const TitleIcon = styled(StyledSvgIcon)<Props>``;
 
 export const Title = styled.h1<Props>``;
 
-export const HomePageLink = styled(Link)<Props>`
-  &:hover {
-    text-decoration: none;
-  }
-`;
+export const HomePageLink = styled(Link)<Props>``;
 
 export const HomePageLinkIcon = styled(StyledSvgIcon)<Props>``;
 
