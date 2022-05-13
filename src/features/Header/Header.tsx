@@ -10,7 +10,7 @@ const Header: FC<HeaderProps> = () => {
 
   return (
     <StyledHeader>
-      <NavBar logo={logo} links={[]} />
+      <NavBar logo={logo} />
     </StyledHeader>
   );
 };

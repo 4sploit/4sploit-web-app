@@ -53,34 +53,39 @@ const NavBar: FC<NavBarProps> = ({ logo, links }) => {
         <LogoLink url="/">
           <StyledSvgIcon as={Logo} />
         </LogoLink>
-        <NavMenuContainer>
-          <IconButton icon={IconNames.Menu} onClick={handleOpenNavMenu} />
-          <Menu
-            keepMounted
-            anchorEl={anchorElNav}
-            anchorOrigin={{
-              vertical: "bottom",
-              horizontal: "left",
-            }}
-            transformOrigin={{
-              vertical: "top",
-              horizontal: "left",
-            }}
-            open={Boolean(anchorElNav)}
-            onClose={handleCloseNavMenu}>
-            {links?.map((link) => (
-              <MenuItem key={link.id} onClick={handleCloseNavMenu}>
-                <NavLink
-                  key={link.id}
-                  url={link.url}
-                  target={link.target}
-                  isExternal={link.isExternal}>
-                  {link.title}
-                </NavLink>
-              </MenuItem>
-            ))}
-          </Menu>
-        </NavMenuContainer>
+        {links && (
+          <NavMenuContainer>
+            <IconButton
+              icon={IconNames.Menu}
+              onClick={handleOpenNavMenu}
+            />
+            <Menu
+              keepMounted
+              anchorEl={anchorElNav}
+              anchorOrigin={{
+                vertical: "bottom",
+                horizontal: "left",
+              }}
+              transformOrigin={{
+                vertical: "top",
+                horizontal: "left",
+              }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}>
+              {links.map((link) => (
+                <MenuItem key={link.id} onClick={handleCloseNavMenu}>
+                  <NavLink
+                    key={link.id}
+                    url={link.url}
+                    target={link.target}
+                    isExternal={link.isExternal}>
+                    {link.title}
+                  </NavLink>
+                </MenuItem>
+              ))}
+            </Menu>
+          </NavMenuContainer>
+        )}
       </MobileNavItemsContainer>
     );
   };
