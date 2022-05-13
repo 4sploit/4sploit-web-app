@@ -28,6 +28,24 @@
           "value": "0"
         }
       ]
+    },
+    {
+      "source": "/assets/images/(.*)",
+      "headers": [
+        {
+          "key": "cache-control",
+          "value": "max-age=864000, no-transform"
+        }
+      ]
+    },
+    {
+      "source": "/assets/fonts/(.*)",
+      "headers": [
+        {
+          "key": "cache-control",
+          "value": "max-age=1728000, no-transform"
+        }
+      ]
     }
   ]
 }
