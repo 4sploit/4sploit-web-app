@@ -1,4 +1,4 @@
-import { Link } from "common/components";
+import { Image, Link } from "common/components";
 import { Sizes } from "common/globals";
 import styled, { css } from "styled-components";
 
@@ -26,7 +26,7 @@ export const PhotoContainer = styled.div<Props>`
   justify-content: center;
 `;
 
-export const Photo = styled.img<Props>`
+export const Photo = styled(Image)<Props>`
   border: 0.313rem solid white;
   width: 18.75rem;
   height: 18.75rem;

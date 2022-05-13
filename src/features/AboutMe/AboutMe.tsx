@@ -19,7 +19,7 @@ const AboutMe: FC<AboutMeProps> = () => {
   return (
     <Container>
       <PhotoContainer>
-        <Photo src={aboutMe.photo} alt={aboutMe.name} />
+        <Photo isLazy={true} src={aboutMe.photo} alt={aboutMe.name} />
       </PhotoContainer>
       <InfoContainer>
         <Name>{aboutMe.name}</Name>
