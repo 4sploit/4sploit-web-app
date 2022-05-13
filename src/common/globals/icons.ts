@@ -1,5 +1,7 @@
 import {
+  Error,
   GitHub,
+  Home,
   LinkedIn,
   Menu,
   Phone,
@@ -14,6 +16,8 @@ enum IconNames {
   Logo = "LOGO",
   Phone = "PHONE",
   Menu = "MENU",
+  Home = "HOME",
+  Error = "ERROR",
 }
 
 type SvgIconComponent =
@@ -30,6 +34,8 @@ const Icons: Icons = {
   [IconNames.Logo]: Logo,
   [IconNames.Phone]: Phone,
   [IconNames.Menu]: Menu,
+  [IconNames.Home]: Home,
+  [IconNames.Error]: Error,
 };
 
 export { Icons, IconNames };
