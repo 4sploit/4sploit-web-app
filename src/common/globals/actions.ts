@@ -1,4 +1,4 @@
-const enum Colors {
+const enum Actions {
   Primary = "primary",
   Secondary = "secondary",
   Success = "success",
@@ -8,4 +8,4 @@ const enum Colors {
   Default = "inherit",
 }
 
-export default Colors;
+export default Actions;
