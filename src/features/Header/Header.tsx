@@ -3,15 +3,14 @@ import { useAppSelector } from "app/hooks";
 import { NavBar } from "common/components/NavBar";
 import { HeaderProps, defaultProps } from "./Header.props";
 import { StyledHeader } from "./Header.style";
-import { IconNames } from "common/globals";
 
 const Header: FC<HeaderProps> = () => {
   const headerStore = useAppSelector((state) => state.header);
-  const links = headerStore.links;
+  const logo = headerStore.logo;
 
   return (
     <StyledHeader>
-      <NavBar logo={IconNames.Logo} links={links} />
+      <NavBar logo={logo} links={[]} />
     </StyledHeader>
   );
 };
