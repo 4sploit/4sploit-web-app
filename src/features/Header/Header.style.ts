@@ -2,4 +2,4 @@ import styled from "styled-components";
 
 interface StyledHeaderProps {}
 
-export const StyledHeader = styled.div<StyledHeaderProps>``;
+export const StyledHeader = styled.header<StyledHeaderProps>``;
