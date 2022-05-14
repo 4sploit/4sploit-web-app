@@ -32,6 +32,7 @@ export const CopyrightContainer = styled.div<Props>`
   justify-content: center;
   flex-grow: 1;
   font-size: 0.875rem;
+  align-self: center;
 `;
 
 export const CopyrightText = styled.span<Props>``;
