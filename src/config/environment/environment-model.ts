@@ -4,4 +4,5 @@ export interface EnvConfig {
   title: string;
   ownerName: string;
   assetsPath: string;
+  googleAnalyticsTrackingId: string;
 }
