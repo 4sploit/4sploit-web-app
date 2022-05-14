@@ -1,4 +1,5 @@
 import { createTheme, Theme } from "@mui/material";
+import { Colors } from "common/globals";
 
 export const AppTheme: Theme = createTheme({
   breakpoints: {
@@ -16,7 +17,7 @@ export const AppTheme: Theme = createTheme({
     fontFamily: "Space Grotesk, sans-serif",
     fontSize: 15,
     allVariants: {
-      color: "#F4F4F5",
+      color: Colors.WhiteSmoke,
     },
   },
   components: {

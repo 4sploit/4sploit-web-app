@@ -1,5 +1,5 @@
 import { Container } from "@mui/material";
-import { Sizes } from "common/globals";
+import { Colors, Sizes } from "common/globals";
 import styled from "styled-components";
 
 interface Props {}
@@ -7,7 +7,7 @@ interface Props {}
 export const Wrapper = styled.div<Props>`
   display: flex;
   flex-direction: column;
-  background-color: #212122;
+  background-color: ${Colors.RaisinBlack};
   min-height: 100vh;
 `;
 
@@ -15,8 +15,8 @@ export const HeaderContainer = styled(Container)<Props>`
   position: fixed;
   top: 0;
   z-index: 100;
-  background-color: #272727;
-  border-bottom: 0.125rem solid #333;
+  background-color: ${Colors.CharlestonGreen};
+  border-bottom: 0.125rem solid ${Colors.DarkCharcoal};
 `;
 
 export const MainContainer = styled(Container)<Props>`
@@ -35,7 +35,7 @@ export const FooterContainer = styled(Container)<Props>`
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #272727;
-  border-top: 0.125rem solid #333;
+  background-color: ${Colors.CharlestonGreen};
+  border-top: 0.125rem solid ${Colors.DarkCharcoal};
   padding: 0.5rem;
 `;

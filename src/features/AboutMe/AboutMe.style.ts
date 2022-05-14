@@ -1,5 +1,5 @@
 import { Image, Link } from "common/components";
-import { Sizes } from "common/globals";
+import { Colors, Sizes } from "common/globals";
 import styled, { css } from "styled-components";
 
 interface Props {}
@@ -27,7 +27,7 @@ export const PhotoContainer = styled.div<Props>`
 `;
 
 export const Photo = styled(Image)<Props>`
-  border: 0.313rem solid white;
+  border: 0.313rem solid ${Colors.White};
   width: 18.75rem;
   height: 18.75rem;
   ${({ theme }) => theme.breakpoints.up(Sizes.Laptop)} {
@@ -67,14 +67,14 @@ export const ActionsContainer = styled.div<Props>`
 `;
 
 export const ActionLink = styled(Link)<Props>`
-  border: 0.125rem solid white;
+  border: 0.125rem solid ${Colors.White};
   padding: 0.5rem 2rem 0.5rem 2rem;
   border-radius: 1.875rem;
-  background-color: #121212;
+  background-color: ${Colors.CodGray};
   &:hover {
     border: 0.125rem solid black;
-    background-color: white;
-    color: #121212;
+    background-color: ${Colors.White};
+    color: ${Colors.CodGray};
     transition: all 0.6s ease-in-out;
     transition-property: all;
     transition-duration: 0.6s;
