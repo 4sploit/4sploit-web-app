@@ -10,13 +10,13 @@ export const Container = styled.div<Props>`
   display: flex;
 `;
 
-export const ExternalLinksContainer = styled.div<Props>`
+export const FooterLinksContainer = styled.div<Props>`
   display: flex;
   flex-basis: 5%;
   line-height: 0.5;
 `;
 
-export const ExternalLink = styled(Link)<Props>`
+export const FooterLink = styled(Link)<Props>`
   padding: 0.2rem;
   &:hover {
     background-color: rgba(255, 255, 255, 0.08);
