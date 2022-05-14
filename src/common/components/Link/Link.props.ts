@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import { Targets } from "common/types";
+import { LinkTypes } from "common/components/Link/constants";
 
 export interface LinkProps {
   id?: string;
@@ -7,7 +8,9 @@ export interface LinkProps {
   url: string;
   target?: Targets;
   children: ReactNode;
-  isExternal?: boolean;
+  linkType?: LinkTypes;
 }
 
-export const defaultProps: Partial<LinkProps> = {};
+export const defaultProps: Partial<LinkProps> = {
+  linkType: LinkTypes.Internal,
+};

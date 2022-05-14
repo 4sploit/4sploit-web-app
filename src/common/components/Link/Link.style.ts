@@ -1,10 +1,10 @@
 import { Colors } from "common/globals";
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink, NavLink } from "react-router-dom";
 import styled, { css } from "styled-components";
 
-interface StyledLinkProps {}
+interface Props {}
 
-const SharedStyle = css<StyledLinkProps>`
+const SharedStyle = css<Props>`
   text-decoration: none;
   font-size: 0.938rem;
   color: ${Colors.LightWhiteSmoke};
@@ -12,10 +12,17 @@ const SharedStyle = css<StyledLinkProps>`
   font-weight: 500;
 `;
 
-export const StyledInternalLink = styled(RouterLink)<StyledLinkProps>`
+export const StyledInternalLink = styled(RouterLink)<Props>`
   ${SharedStyle}
 `;
 
-export const StyledExternalLink = styled.a<StyledLinkProps>`
+export const StyledExternalLink = styled.a<Props>`
   ${SharedStyle}
+`;
+
+export const StyledNavigationalLink = styled(NavLink)<Props>`
+  ${SharedStyle}
+  &.active {
+    border-bottom: 0.094rem solid ${Colors.White};
+  }
 `;
