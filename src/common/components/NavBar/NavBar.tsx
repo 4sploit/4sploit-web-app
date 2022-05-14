@@ -15,6 +15,7 @@ import {
   StyledSvgIcon,
 } from "./NavBar.style";
 import { IconNames, Icons, Sizes } from "common/globals";
+import { LinkTypes } from "common/components/Link";
 
 const NavBar: FC<NavBarProps> = ({ logo, links }) => {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
@@ -38,7 +39,14 @@ const NavBar: FC<NavBarProps> = ({ logo, links }) => {
         </LogoLink>
         <LinksContainer>
           {links?.map((link) => (
-            <NavLink key={link.id} url={link.url}>
+            <NavLink
+              key={link.id}
+              url={link.url}
+              linkType={
+                link.isExternal
+                  ? LinkTypes.External
+                  : LinkTypes.Navigational
+              }>
               {link.title}
             </NavLink>
           ))}
@@ -78,7 +86,11 @@ const NavBar: FC<NavBarProps> = ({ logo, links }) => {
                     key={link.id}
                     url={link.url}
                     target={link.target}
-                    isExternal={link.isExternal}>
+                    linkType={
+                      link.isExternal
+                        ? LinkTypes.External
+                        : LinkTypes.Navigational
+                    }>
                     {link.title}
                   </NavLink>
                 </MenuItem>

@@ -6,11 +6,12 @@ import {
   Container,
   CopyrightContainer,
   CopyrightText,
-  ExternalLink,
-  ExternalLinksContainer,
+  FooterLink,
+  FooterLinksContainer,
   StyledFooter,
   StyledSvgIcon,
 } from "./Footer.style";
+import { LinkTypes } from "common/components/Link";
 
 const Footer: FC<FooterProps> = () => {
   const footerStore = useAppSelector((state) => state.footer);
@@ -18,17 +19,19 @@ const Footer: FC<FooterProps> = () => {
   return (
     <StyledFooter>
       <Container>
-        <ExternalLinksContainer>
+        <FooterLinksContainer>
           {footerStore.externalLinks.map((link) => (
-            <ExternalLink
+            <FooterLink
               key={link.id}
               url={link.url}
               target={link.target}
-              isExternal={link.isExternal}>
+              linkType={
+                link.isExternal ? LinkTypes.External : LinkTypes.Internal
+              }>
               {link.icon && <StyledSvgIcon as={Icons[link.icon]} />}
-            </ExternalLink>
+            </FooterLink>
           ))}
-        </ExternalLinksContainer>
+        </FooterLinksContainer>
         <CopyrightContainer>
           <CopyrightText>
             {footerStore.ownerName} © {new Date().getFullYear()}

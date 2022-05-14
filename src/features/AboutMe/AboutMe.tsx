@@ -1,4 +1,5 @@
 import { useAppSelector } from "app/hooks";
+import { LinkTypes } from "common/components/Link";
 import { FC } from "react";
 import { AboutMeProps, defaultProps } from "./AboutMe.props";
 import {
@@ -31,7 +32,9 @@ const AboutMe: FC<AboutMeProps> = () => {
               key={action.id}
               url={action.url}
               target={action.target}
-              isExternal={action.isExternal}>
+              linkType={
+                action.isExternal ? LinkTypes.External : LinkTypes.Internal
+              }>
               {action.title}
             </ActionLink>
           ))}
