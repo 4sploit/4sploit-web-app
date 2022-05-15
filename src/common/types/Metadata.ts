@@ -4,7 +4,6 @@ interface Metadata {
   title: string;
   description?: string;
   robots?: Robots[];
-  withAppTitle?: boolean;
 }
 
 export default Metadata;

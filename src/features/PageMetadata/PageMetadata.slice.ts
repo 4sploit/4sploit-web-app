@@ -2,7 +2,8 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Metadata } from "common/types";
 
 const defaultMetadata: Metadata = {
-  title: "default",
+  title: "",
+  description: "My Personal Web Application",
 };
 
 const initialState = {

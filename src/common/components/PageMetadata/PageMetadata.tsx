@@ -7,12 +7,12 @@ const PageMetadata: FC<PageMetadataProps> = ({
   title,
   description,
   robots,
-  withAppTitle,
 }) => {
   return (
     <Helmet prioritizeSeoTags>
       <title>
-        {`${title}`} {withAppTitle ? `| ${env.title}` : ""}
+        {title ? `${title} | ` : ""}
+        {env.title}
       </title>
       {description && <meta name="description" content={description} />}
       {robots?.length && <meta name="robots" content={robots.join(",")} />}
