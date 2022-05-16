@@ -6,30 +6,25 @@ import {
   Container,
   ContentContainer,
   GoBackButton,
-  HomePageLink,
-  HomePageLinkIcon,
+  HomePageIconLink,
   LinksContainer,
   Title,
   TitleIcon,
 } from "./NotFoundPage.style";
 import { useNavigate } from "react-router-dom";
-import { Actions, Icons, Variants } from "common/globals";
+import { Actions, IconNames, Variants } from "common/globals";
 
 const NotFoundPage: FC<NotFoundPageProps> = () => {
   const navigate = useNavigate();
-  const ErrorIcon = Icons.ERROR;
-  const HomeIcon = Icons.HOME;
 
   return (
     <Container>
       <ContentContainer>
-        <TitleIcon fontSize="8" as={ErrorIcon} />
+        <TitleIcon icon={IconNames.Error} />
         <Title>Page Not Found</Title>
       </ContentContainer>
       <LinksContainer>
-        <HomePageLink url="/">
-          <HomePageLinkIcon fontSize="2.5" as={HomeIcon} />
-        </HomePageLink>
+        <HomePageIconLink url="/" icon={IconNames.Home} />
         <GoBackButton
           variant={Variants.Contained}
           action={Actions.Primary}

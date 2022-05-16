@@ -1,12 +1,7 @@
-import { SvgIcon } from "@mui/material";
-import { Button, Link } from "common/components";
+import { Button, Icon, IconLink } from "common/components";
 import styled, { css } from "styled-components";
 
 interface Props {}
-
-const StyledSvgIcon = styled(SvgIcon)<Props>`
-  font-size: ${({ fontSize }) => `${fontSize}rem`};
-`;
 
 const SharedContainerStyle = css<Props>`
   display: flex;
@@ -19,6 +14,9 @@ export const Container = styled.div<Props>`
 `;
 
 export const ContentContainer = styled.div<Props>`
+  .icon {
+    font-size: 8rem;
+  }
   ${SharedContainerStyle}
 `;
 
@@ -29,12 +27,14 @@ export const LinksContainer = styled.div<Props>`
   flex-wrap: wrap;
 `;
 
-export const TitleIcon = styled(StyledSvgIcon)<Props>``;
+export const TitleIcon = styled(Icon)<Props>``;
 
 export const Title = styled.h1<Props>``;
 
-export const HomePageLink = styled(Link)<Props>``;
-
-export const HomePageLinkIcon = styled(StyledSvgIcon)<Props>``;
+export const HomePageIconLink = styled(IconLink)<Props>`
+  .icon {
+    font-size: 2.5rem;
+  }
+`;
 
 export const GoBackButton = styled(Button)<Props>``;
