@@ -1,15 +1,13 @@
 import { FC } from "react";
 import { useAppSelector } from "app/hooks";
-import { Icons } from "common/globals";
 import { FooterProps, defaultProps } from "./Footer.props";
 import {
   Container,
   CopyrightContainer,
   CopyrightText,
-  FooterLink,
+  FooterIconLink,
   FooterLinksContainer,
   StyledFooter,
-  StyledSvgIcon,
 } from "./Footer.style";
 import { LinkTypes } from "common/components/Link";
 
@@ -20,17 +18,22 @@ const Footer: FC<FooterProps> = () => {
     <StyledFooter>
       <Container>
         <FooterLinksContainer>
-          {footerStore.externalLinks.map((link) => (
-            <FooterLink
-              key={link.id}
-              url={link.url}
-              target={link.target}
-              linkType={
-                link.isExternal ? LinkTypes.External : LinkTypes.Internal
-              }>
-              {link.icon && <StyledSvgIcon as={Icons[link.icon]} />}
-            </FooterLink>
-          ))}
+          {footerStore.externalLinks.map(
+            (link) =>
+              link.icon && (
+                <FooterIconLink
+                  key={link.id}
+                  url={link.url}
+                  target={link.target}
+                  icon={link.icon}
+                  linkType={
+                    link.isExternal
+                      ? LinkTypes.External
+                      : LinkTypes.Internal
+                  }
+                />
+              )
+          )}
         </FooterLinksContainer>
         <CopyrightContainer>
           <CopyrightText>

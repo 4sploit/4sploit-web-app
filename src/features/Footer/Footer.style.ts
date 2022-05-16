@@ -1,5 +1,4 @@
-import { SvgIcon } from "@mui/material";
-import { Link } from "common/components";
+import { IconLink } from "common/components";
 import styled from "styled-components";
 
 interface Props {}
@@ -16,15 +15,14 @@ export const FooterLinksContainer = styled.div<Props>`
   line-height: 0.5;
 `;
 
-export const FooterLink = styled(Link)<Props>`
+export const FooterIconLink = styled(IconLink)<Props>`
   padding: 0.2rem;
+  .icon {
+    font-size: 1.313rem;
+  }
   &:hover {
     background-color: rgba(255, 255, 255, 0.08);
   }
-`;
-
-export const StyledSvgIcon = styled(SvgIcon)<Props>`
-  font-size: 1.313rem;
 `;
 
 export const CopyrightContainer = styled.div<Props>`

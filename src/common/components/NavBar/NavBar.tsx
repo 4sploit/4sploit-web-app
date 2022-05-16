@@ -5,23 +5,21 @@ import { NavBarProps, defaultProps } from "./NavBar.props";
 import {
   DesktopNavItemsContainer,
   LinksContainer,
-  LogoLink,
+  LogoIconLink,
   Menu,
   MenuItem,
   MobileNavItemsContainer,
   NavLink,
   NavMenuContainer,
   StyledNavBar,
-  StyledSvgIcon,
 } from "./NavBar.style";
-import { IconNames, Icons, Sizes } from "common/globals";
+import { IconNames, Sizes } from "common/globals";
 import { LinkTypes } from "common/components/Link";
 
 const NavBar: FC<NavBarProps> = ({ logo, links }) => {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.only(Sizes.Mobile));
-  const Logo = Icons[logo];
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -34,9 +32,7 @@ const NavBar: FC<NavBarProps> = ({ logo, links }) => {
   const renderDesktopNavigationItems = () => {
     return (
       <DesktopNavItemsContainer>
-        <LogoLink url="/">
-          <StyledSvgIcon as={Logo} />
-        </LogoLink>
+        <LogoIconLink url="/" icon={logo} />
         <LinksContainer>
           {links?.map((link) => (
             <NavLink
@@ -58,9 +54,7 @@ const NavBar: FC<NavBarProps> = ({ logo, links }) => {
   const renderMobileNavigationItems = () => {
     return (
       <MobileNavItemsContainer>
-        <LogoLink url="/">
-          <StyledSvgIcon as={Logo} />
-        </LogoLink>
+        <LogoIconLink url="/" icon={logo} />
         {links && (
           <NavMenuContainer>
             <IconButton
