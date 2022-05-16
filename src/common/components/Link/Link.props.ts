@@ -2,13 +2,16 @@ import { ReactNode } from "react";
 import { Targets } from "common/types";
 import { LinkTypes } from "common/components/Link/constants";
 
-export interface LinkProps {
+export interface LinkBaseProps {
   id?: string;
   className?: string;
   url: string;
   target?: Targets;
-  children: ReactNode;
   linkType?: LinkTypes;
+}
+
+export interface LinkProps extends LinkBaseProps {
+  children: ReactNode;
 }
 
 export const defaultProps: Partial<LinkProps> = {
