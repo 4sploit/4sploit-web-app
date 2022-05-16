@@ -1,14 +1,12 @@
-import { Icons } from "common/globals";
+import { Icon } from "common/components";
 import { FC } from "react";
 import { IconButtonProps, defaultProps } from "./IconButton.props";
 import { StyledIconButton } from "./IconButton.style";
 
 const IconButton: FC<IconButtonProps> = ({ icon, ...rest }) => {
-  const Icon = Icons[icon];
-
   return (
     <StyledIconButton {...rest}>
-      <Icon />
+      <Icon icon={icon} />
     </StyledIconButton>
   );
 };
