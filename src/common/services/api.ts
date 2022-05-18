@@ -15,8 +15,7 @@ const constructApiClient = (
   const config = { ...defaultRequestConfig, ...requestConfig };
 
   return axios.create({
-    baseURL: config.baseUrl,
-    headers: config.headers,
+    ...config,
   });
 };
 
