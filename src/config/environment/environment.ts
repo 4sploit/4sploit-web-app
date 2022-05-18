@@ -7,6 +7,7 @@ const {
   REACT_APP_OWNER_NAME,
   REACT_APP_ASSETS_PATH,
   REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID,
+  REACT_APP_API_BASE_URL,
 } = process.env;
 
 const env: Partial<EnvConfig> = {
@@ -16,6 +17,7 @@ const env: Partial<EnvConfig> = {
   ownerName: REACT_APP_OWNER_NAME,
   assetsPath: REACT_APP_ASSETS_PATH,
   googleAnalyticsTrackingId: REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID,
+  apiBaseUrl: REACT_APP_API_BASE_URL,
 };
 
 export default env;

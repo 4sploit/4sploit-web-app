@@ -5,4 +5,5 @@ export interface EnvConfig {
   ownerName: string;
   assetsPath: string;
   googleAnalyticsTrackingId: string;
+  apiBaseUrl: string;
 }
