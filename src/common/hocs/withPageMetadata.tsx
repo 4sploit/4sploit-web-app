@@ -1,7 +1,7 @@
 import { FC, useEffect } from "react";
 import { useAppDispatch } from "app/hooks";
 import { setMetadata } from "features/PageMetadata";
-import { Metadata } from "../types";
+import { Metadata } from "common/types";
 
 export const withPageMetadata = <P,>(
   WrappedComponent: React.ComponentType<P>,
