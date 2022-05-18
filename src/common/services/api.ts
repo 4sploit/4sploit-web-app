@@ -2,7 +2,7 @@ import axios from "axios";
 import { ApiClientRequestConfig } from "common/types";
 import { env } from "config";
 
-const defaultRequestConfig: ApiClientRequestConfig = {
+const defaultApiClientRequestConfig: ApiClientRequestConfig = {
   baseUrl: env.apiBaseUrl || "",
   headers: {
     "Content-type": "application/json",
@@ -10,9 +10,12 @@ const defaultRequestConfig: ApiClientRequestConfig = {
 };
 
 const constructApiClient = (
-  requestConfig: Partial<ApiClientRequestConfig>
+  apiClientRequestConfig: Partial<ApiClientRequestConfig>
 ) => {
-  const config = { ...defaultRequestConfig, ...requestConfig };
+  const config = {
+    ...defaultApiClientRequestConfig,
+    ...apiClientRequestConfig,
+  };
 
   return axios.create({
     ...config,
