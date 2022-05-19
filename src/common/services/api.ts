@@ -9,7 +9,7 @@ const defaultApiClientRequestConfig: ApiClientRequestConfig = {
   },
 };
 
-const constructApiClient = (
+const createApiClient = (
   apiClientRequestConfig: Partial<ApiClientRequestConfig>
 ) => {
   const config = {
@@ -22,4 +22,4 @@ const constructApiClient = (
   });
 };
 
-export default constructApiClient;
+export default createApiClient;

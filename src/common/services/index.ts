@@ -1,1 +1,1 @@
-export { default as constructApiClient } from "./api";
+export { default as createApiClient } from "./api";
