@@ -1,6 +1,8 @@
-export type Headers = Record<string, string | number | boolean>;
+type Headers = Record<string, string | number | boolean>;
 
-export interface ApiClientRequestConfig {
+interface ApiClientRequestConfig {
   baseUrl: string;
   headers?: Headers;
 }
+
+export type { ApiClientRequestConfig };
