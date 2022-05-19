@@ -8,9 +8,7 @@ enum ImageFileNames {
   Photo = "photo.jpg",
 }
 
-type Images = {
-  [imageName in ImageNames]: string;
-};
+type Images = Record<ImageNames, string>;
 
 const Images: Images = {
   [ImageNames.Photo]: `${env.assetsPath}/images/${ImageFileNames.Photo}`,

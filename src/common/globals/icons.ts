@@ -24,9 +24,7 @@ type SvgIconComponent =
   | FunctionComponent<React.SVGProps<SVGSVGElement>>
   | MaterialSvgIconComponent;
 
-type Icons = {
-  [iconName in IconNames]: SvgIconComponent;
-};
+type Icons = Record<IconNames, SvgIconComponent>;
 
 const Icons: Icons = {
   [IconNames.LinkedIn]: LinkedIn,
