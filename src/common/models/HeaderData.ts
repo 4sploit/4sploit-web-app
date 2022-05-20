@@ -1,7 +1,8 @@
+import { IconNames } from "common/globals";
 import Link from "common/models/Link";
 
 interface HeaderData {
-  logo?: string;
+  logo: IconNames;
   links?: Link[];
 }
 

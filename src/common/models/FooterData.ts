@@ -1,7 +1,8 @@
 import Link from "common/models/Link";
 
 interface FooterData {
-  externalLinks?: Link[];
+  ownerName?: string;
+  externalLinks: Link[];
 }
 
 export default FooterData;
