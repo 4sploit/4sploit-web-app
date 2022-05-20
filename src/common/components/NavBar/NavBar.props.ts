@@ -1,4 +1,4 @@
-import { Link } from "common/types";
+import { Link } from "common/models";
 import { IconNames } from "common/globals";
 
 export interface NavBarProps {

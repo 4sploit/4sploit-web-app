@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { FileNames, Files, ImageNames, Images } from "common/globals";
-import { Link, Targets } from "common/types";
+import { Targets } from "common/types";
+import { Link } from "common/models";
 import { env } from "config";
 
 interface AboutMe {
@@ -13,7 +14,7 @@ interface AboutMe {
 
 const initialState: AboutMe = {
   photo: Images[ImageNames.Photo],
-  name: env.ownerName || "",
+  name: env.ownerName ?? "",
   speciality: "Full Stack Developer",
   description:
     "Well-qualified Full Stack Developer " +

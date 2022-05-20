@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { IconNames } from "common/globals";
-import { Link, Targets } from "common/types";
+import { Targets } from "common/types";
+import { Link } from "common/models";
 import { env } from "config";
 
 interface Footer {
@@ -9,7 +10,7 @@ interface Footer {
 }
 
 const initialState: Footer = {
-  ownerName: env.ownerName || "",
+  ownerName: env.ownerName ?? "",
   externalLinks: [
     {
       id: "1",
