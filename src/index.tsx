@@ -7,7 +7,7 @@ import { env } from "config";
 const initGoogleAnalytics = () => {
   ReactGA.initialize([
     {
-      trackingId: env.googleAnalyticsTrackingId || "",
+      trackingId: env.googleAnalyticsTrackingId ?? "",
     },
   ]);
 };
