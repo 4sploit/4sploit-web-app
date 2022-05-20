@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { IconNames } from "common/globals";
-import { Link } from "common/types";
+import { Link } from "common/models";
 
 interface Header {
   logo: IconNames;
