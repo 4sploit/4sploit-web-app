@@ -5,10 +5,20 @@ import {
   ApiResponse,
 } from "common/types";
 import axiosRetry from "axios-retry";
-import {
-  defaultApiClienRetryPolicyConfig,
-  defaultApiClientRequestConfig,
-} from "common/services/api/config";
+import { env } from "config";
+import { ApiHeaders } from "common/constants";
+
+const defaultApiClientRequestConfig: ApiClientRequestConfig = {
+  baseUrl: env.apiBaseUrl || "",
+  headers: {
+    [ApiHeaders.ContentType]: "application/json",
+  },
+};
+
+const defaultApiClienRetryPolicyConfig: ApiClientRetryPolicyConfig = {
+  retries: 3,
+  retryDelay: axiosRetry.exponentialDelay,
+};
 
 const createAxiosClientInstance = (
   apiClientRequestConfig: Partial<ApiClientRequestConfig>,
