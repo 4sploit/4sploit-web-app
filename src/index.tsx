@@ -1,8 +1,8 @@
 import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
-import App from "./app/App";
 import ReactGA from "react-ga4";
 import { env } from "config";
+import App from "App";
 
 const initGoogleAnalytics = () => {
   ReactGA.initialize([
