@@ -1,0 +1,15 @@
+{
+  "logo": "LOGO",
+  "links": [
+    {
+      "id": "1",
+      "title": "projects",
+      "url": "projects"
+    },
+    {
+      "id": "2",
+      "title": "blog",
+      "url": "blog"
+    }
+  ]
+}
