@@ -1,4 +1,12 @@
-import { EnvConfig } from "./environment-model";
+interface EnvConfig {
+  environment: string;
+  isUnderConstruction: boolean;
+  title: string;
+  ownerName: string;
+  assetsPath: string;
+  googleAnalyticsTrackingId: string;
+  apiBaseUrl: string;
+}
 
 const {
   REACT_APP_NODE_ENV,
