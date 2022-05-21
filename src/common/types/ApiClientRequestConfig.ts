@@ -1,8 +1,10 @@
-type Headers = Record<string, string | number | boolean>;
+import { ApiHeaders } from "common/constants";
+
+type Headers = Record<ApiHeaders, string | number | boolean>;
 
 interface ApiClientRequestConfig {
   baseUrl: string;
-  headers?: Headers;
+  headers?: Partial<Headers>;
 }
 
 export type { ApiClientRequestConfig };
