@@ -1,8 +1,8 @@
 import { combineReducers } from "@reduxjs/toolkit";
+import pageMetadataReducer from "features/PageMetadata/PageMetadata.slice";
 import { aboutMeReducer } from "features/AboutMe";
 import { footerReducer } from "features/Footer";
 import { headerReducer } from "features/Header";
-import { pageMetadataReducer } from "features/PageMetadata";
 
 const rootReducer = combineReducers({
   pageMetadata: pageMetadataReducer,

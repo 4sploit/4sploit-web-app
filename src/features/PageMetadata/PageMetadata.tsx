@@ -4,7 +4,7 @@ import { PageMetadata as PageMetadataComponent } from "common/components";
 import { useAppSelector } from "store";
 
 const PageMetadata: FC = () => {
-  const metadata = useAppSelector((state) => state.pageMetadata.metdata);
+  const metadata = useAppSelector((state) => state.pageMetadata.metadata);
 
   return <PageMetadataComponent {...metadata} />;
 };

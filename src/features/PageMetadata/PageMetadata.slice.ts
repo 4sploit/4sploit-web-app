@@ -7,7 +7,7 @@ const defaultMetadata: Metadata = {
 };
 
 const initialState = {
-  metdata: defaultMetadata,
+  metadata: defaultMetadata,
 };
 
 const pageMetadataSlice = createSlice({
@@ -15,7 +15,7 @@ const pageMetadataSlice = createSlice({
   initialState,
   reducers: {
     setMetadata(state, action: PayloadAction<Metadata>) {
-      state.metdata = { ...action.payload };
+      state.metadata = { ...action.payload };
     },
   },
 });
