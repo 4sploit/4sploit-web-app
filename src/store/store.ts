@@ -8,7 +8,7 @@ import {
 import { sagaMiddleware } from "store/middlewares";
 import rootReducer, { RootState } from "store/rootReducer";
 
-export const store = configureStore({
+const store = configureStore({
   devTools: env.environment !== "production",
   reducer: rootReducer,
   middleware: [sagaMiddleware],
