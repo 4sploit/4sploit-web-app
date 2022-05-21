@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Targets } from "common/types";
+import { Targets } from "common/constants";
 import { LinkTypes } from "common/components/Link/constants";
 
 export interface LinkBaseProps {

@@ -1,5 +1,5 @@
 import { IconNames } from "common/globals";
-import { Targets } from "common/types";
+import { Targets } from "common/constants";
 
 interface Link {
   id: string;

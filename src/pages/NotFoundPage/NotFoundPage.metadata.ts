@@ -1,4 +1,5 @@
-import { Metadata, Robots } from "common/types";
+import { Robots } from "common/constants";
+import { Metadata } from "common/types";
 
 export const metadata: Metadata = {
   title: "Page Not Found",

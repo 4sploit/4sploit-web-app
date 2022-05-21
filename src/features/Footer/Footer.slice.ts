@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { IconNames } from "common/globals";
-import { Targets } from "common/types";
+import { Targets } from "common/constants";
 import { Link } from "common/models";
 import { env } from "config";
 
