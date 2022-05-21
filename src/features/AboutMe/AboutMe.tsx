@@ -1,4 +1,4 @@
-import { useAppSelector } from "app/hooks";
+import { useAppSelector } from "store";
 import { LinkTypes } from "common/components/Link";
 import { FC } from "react";
 import { AboutMeProps, defaultProps } from "./AboutMe.props";

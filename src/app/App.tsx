@@ -6,9 +6,9 @@ import { HelmetProvider } from "react-helmet-async";
 import { AppTheme, GlobalStyle } from "common/styles";
 import { env } from "config";
 import { Provider } from "react-redux";
-import store from "./store";
 import { PageMetadata } from "features/PageMetadata";
 import { CssBaseline, StyledEngineProvider } from "@mui/material";
+import { store } from "store";
 
 const App = () => {
   return (

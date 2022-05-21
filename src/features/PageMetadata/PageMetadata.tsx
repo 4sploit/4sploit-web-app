@@ -1,7 +1,7 @@
 import { FC } from "react";
 // eslint-disable-next-line max-len
 import { PageMetadata as PageMetadataComponent } from "common/components";
-import { useAppSelector } from "app/hooks";
+import { useAppSelector } from "store";
 
 const PageMetadata: FC = () => {
   const metadata = useAppSelector((state) => state.pageMetadata.metdata);

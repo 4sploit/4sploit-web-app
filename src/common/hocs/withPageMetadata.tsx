@@ -1,5 +1,5 @@
 import { FC, useEffect } from "react";
-import { useAppDispatch } from "app/hooks";
+import { useAppDispatch } from "store";
 import { setMetadata } from "features/PageMetadata";
 import { Metadata } from "common/types";
 

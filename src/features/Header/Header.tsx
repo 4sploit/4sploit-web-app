@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { useAppSelector } from "app/hooks";
+import { useAppSelector } from "store";
 import { NavBar } from "common/components/NavBar";
 import { HeaderProps, defaultProps } from "./Header.props";
 import { StyledHeader } from "./Header.style";
