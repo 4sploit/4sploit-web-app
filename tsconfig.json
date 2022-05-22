@@ -15,9 +15,11 @@
     "isolatedModules": true,
     "noEmit": true,
     "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "jsx": "react-jsx",
     "baseUrl": "src",
-    "typeRoots": ["node_modules/@types", "typings"]
+    "typeRoots": ["node_modules/@types", "typings"],
+    "types": ["reflect-metadata"]
   },
   "include": ["src"]
 }
