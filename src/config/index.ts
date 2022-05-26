@@ -1,2 +1,2 @@
-export { default as env } from "./Environment";
-export { default as ioContainer } from "./IoC";
+export { default as env } from "./environment";
+export { default as ioContainer } from "./ioc";
