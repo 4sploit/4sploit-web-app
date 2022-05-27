@@ -43,7 +43,7 @@
     "no-duplicate-imports": ["error", { "includeExports": true }],
     "no-eval": "error",
     "no-delete-var": "error",
-    "no-empty-function": "error",
+    "no-empty-function": "off",
     "react/react-in-jsx-scope": "off",
     "react/jsx-uses-vars": "error",
     "react/jsx-pascal-case": "error",
