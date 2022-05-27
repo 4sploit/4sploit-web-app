@@ -35,7 +35,8 @@ const createAxiosClientInstance = (
   };
 
   const axiosInstance = axios.create({
-    ...config,
+    baseURL: config.baseUrl,
+    headers: config.headers,
   });
 
   axiosRetry(axiosInstance, retryPolicyConfig);
