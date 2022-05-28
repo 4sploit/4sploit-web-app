@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { useAppSelector } from "store";
+import { useTypedSelector } from "store";
 import { FooterProps, defaultProps } from "./Footer.props";
 import {
   Container,
@@ -12,7 +12,7 @@ import {
 import { LinkTypes } from "common/components/Link";
 
 const Footer: FC<FooterProps> = () => {
-  const footerStore = useAppSelector((state) => state.footer);
+  const footerStore = useTypedSelector((state) => state.footer);
 
   return (
     <StyledFooter>

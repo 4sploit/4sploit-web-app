@@ -1,4 +1,4 @@
-import { useAppSelector } from "store";
+import { useTypedSelector } from "store";
 import { LinkTypes } from "common/components/Link";
 import { FC } from "react";
 import { AboutMeProps, defaultProps } from "./AboutMe.props";
@@ -15,7 +15,7 @@ import {
 } from "./AboutMe.style";
 
 const AboutMe: FC<AboutMeProps> = () => {
-  const aboutMe = useAppSelector((state) => state.aboutMe);
+  const aboutMe = useTypedSelector((state) => state.aboutMe);
 
   return (
     <Container>

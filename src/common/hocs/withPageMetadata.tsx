@@ -1,5 +1,5 @@
 import { FC, useEffect } from "react";
-import { useAppDispatch } from "store";
+import { useTypedDispatch } from "store";
 import { setMetadata } from "features/PageMetadata";
 import { Metadata } from "common/types";
 
@@ -8,7 +8,7 @@ export const withPageMetadata = <P,>(
   metadata: Metadata
 ) => {
   const WrapperComponent: FC<P> = (props: P) => {
-    const dispatch = useAppDispatch();
+    const dispatch = useTypedDispatch();
 
     useEffect(() => {
       dispatch(setMetadata(metadata));
