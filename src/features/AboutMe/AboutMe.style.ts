@@ -1,4 +1,4 @@
-import { Image, Link } from "common/components";
+import { Image, Link, Loader } from "common/components";
 import { Colors, Sizes } from "common/globals";
 import styled, { css } from "styled-components";
 
@@ -82,3 +82,5 @@ export const ActionLink = styled(Link)<Props>`
     transition-delay: 0s;
   }
 `;
+
+export const StyledLoader = styled(Loader)<Props>``;
