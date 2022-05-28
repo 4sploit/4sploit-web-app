@@ -17,13 +17,17 @@ const Header: FC<HeaderProps> = () => {
     }
   }, [status, dispatch]);
 
+  if (status == ApiStatus.Loading) {
+    return <Loader />;
+  }
+
+  if (!data) {
+    return null;
+  }
+
   return (
     <StyledHeader>
-      {status == ApiStatus.Loading ? (
-        <Loader />
-      ) : (
-        data && <NavBar logo={data.logo} links={data.links} />
-      )}
+      <NavBar logo={data.logo} links={data.links} />
     </StyledHeader>
   );
 };
