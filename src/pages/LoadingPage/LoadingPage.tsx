@@ -1,12 +1,12 @@
 import { FC } from "react";
 import { LoadingPageProps, defaultProps } from "./LoadingPage.props";
 import { StyledLoadingPage } from "./LoadingPage.style";
-import { CircularProgress } from "@mui/material";
+import { Loader } from "common/components";
 
 const LoadingPage: FC<LoadingPageProps> = (props: LoadingPageProps) => {
   return (
     <StyledLoadingPage {...props}>
-      <CircularProgress />
+      <Loader />
     </StyledLoadingPage>
   );
 };
