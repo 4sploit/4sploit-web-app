@@ -1,24 +1,18 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { IconNames } from "common/globals";
-import { Link } from "common/models";
+import { ApiStatus } from "common/constants";
+import { HeaderData } from "common/models";
+import { ApiState } from "common/types";
+import getHeaderData from "features/Header/Header.thunk";
+import { createApiSlice } from "store/slices";
 
-interface Header {
-  logo: IconNames;
-  links: Array<Link>;
-}
-
-const initialState: Header = {
-  logo: IconNames.Logo,
-  links: [
-    { id: "1", title: "projects", url: "projects" },
-    { id: "2", title: "blog", url: "blog" },
-  ],
+const initialState: ApiState<HeaderData> = {
+  status: ApiStatus.Idle,
 };
 
-const headerSlice = createSlice({
+const headerSlice = createApiSlice({
   name: "header",
   initialState,
   reducers: {},
+  thunk: getHeaderData,
 });
 
 export default headerSlice.reducer;
