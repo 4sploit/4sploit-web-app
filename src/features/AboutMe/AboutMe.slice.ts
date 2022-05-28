@@ -1,52 +1,38 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { ApiStatus } from "common/constants";
+import { AboutData } from "common/models";
+import { createApiSlice } from "store/slices";
+import getAboutData from "features/AboutMe/AboutMe.thunk";
+import { ApiState } from "common/types";
 import { FileNames, Files, ImageNames, Images } from "common/globals";
-import { Targets } from "common/constants";
-import { Link } from "common/models";
-import { env } from "config";
 
-interface AboutMe {
-  photo: string;
-  name: string;
-  speciality: string;
-  description: string;
-  actions: Array<Link>;
-}
-
-const initialState: AboutMe = {
-  photo: Images[ImageNames.Photo],
-  name: env.ownerName ?? "",
-  speciality: "Full Stack Developer",
-  description:
-    "Well-qualified Full Stack Developer " +
-    "familiar with a wide range of technologies and " +
-    "programming languages, " +
-    "Knowledgeable of backend and frontend development requirements, " +
-    "Able to handle any part of the process with ease, " +
-    "Collaborative team player " +
-    "with excellent technical abilities offering more than 4 years " +
-    "of related experience.",
-  actions: [
-    {
-      id: "1",
-      title: "download CV",
-      url: Files[FileNames.CV],
-      target: Targets.Blank,
-      isExternal: true,
-    },
-    {
-      id: "2",
-      title: "contact",
-      url: "tel:+972502891914",
-      target: Targets.Blank,
-      isExternal: true,
-    },
-  ],
+const initialState: ApiState<AboutData> = {
+  status: ApiStatus.Idle,
 };
 
-const AboutMeSlice = createSlice({
-  name: "AboutMe",
+const aboutMeSlice = createApiSlice({
+  name: "footer",
   initialState,
-  reducers: {},
+  reducers: {
+    mapAboutData: (state) => {
+      const { data } = state;
+
+      if (data) {
+        state.data = {
+          ...data,
+          photo: Images[data.photo as ImageNames],
+          actions: data.actions.map((action) => ({
+            ...action,
+            url:
+              action.url in Files
+                ? Files[action.url as FileNames]
+                : action.url,
+          })),
+        };
+      }
+    },
+  },
+  thunk: getAboutData,
 });
 
-export default AboutMeSlice.reducer;
+export const { mapAboutData } = aboutMeSlice.actions;
+export default aboutMeSlice.reducer;

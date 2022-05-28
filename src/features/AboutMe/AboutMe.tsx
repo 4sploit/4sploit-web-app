@@ -1,6 +1,6 @@
-import { useTypedSelector } from "store";
+import { useTypedDispatch, useTypedSelector } from "store";
 import { LinkTypes } from "common/components/Link";
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import { AboutMeProps, defaultProps } from "./AboutMe.props";
 import {
   ActionLink,
@@ -13,21 +13,42 @@ import {
   PhotoContainer,
   Specialty,
 } from "./AboutMe.style";
+import { ApiStatus } from "common/constants";
+import getAboutData from "features/AboutMe/AboutMe.thunk";
+import { env } from "config";
+import { Loader } from "common/components";
+import { mapAboutData } from "features/AboutMe/AboutMe.slice";
 
 const AboutMe: FC<AboutMeProps> = () => {
-  const aboutMe = useTypedSelector((state) => state.aboutMe);
+  const { data, status } = useTypedSelector((state) => state.aboutMe);
+  const dispatch = useTypedDispatch();
+  const ownerName: string = env.ownerName || "";
+
+  useEffect(() => {
+    if (status == ApiStatus.Idle) {
+      dispatch(getAboutData()).then(() => dispatch(mapAboutData()));
+    }
+  }, [status, dispatch]);
+
+  if (status == ApiStatus.Loading) {
+    return <Loader />;
+  }
+
+  if (!data) {
+    return null;
+  }
 
   return (
     <Container>
       <PhotoContainer>
-        <Photo isLazy={true} src={aboutMe.photo} alt={aboutMe.name} />
+        <Photo isLazy={true} src={data.photo} alt={ownerName} />
       </PhotoContainer>
       <InfoContainer>
-        <Name>{aboutMe.name}</Name>
-        <Specialty>{aboutMe.speciality}</Specialty>
-        <Description>{aboutMe.description}</Description>
+        <Name>{ownerName}</Name>
+        <Specialty>{data.speciality}</Specialty>
+        <Description>{data.description}</Description>
         <ActionsContainer>
-          {aboutMe.actions.map((action) => (
+          {data.actions.map((action) => (
             <ActionLink
               key={action.id}
               url={action.url}
