@@ -5,7 +5,7 @@ import { BlogPageProps, defaultProps } from "./BlogPage.props";
 import { StyledBlogPage } from "./BlogPage.style";
 
 const BlogPage: FC<BlogPageProps> = (props: BlogPageProps) => {
-  return <StyledBlogPage {...props}>BlogPage</StyledBlogPage>;
+  return <StyledBlogPage {...props}>Blog</StyledBlogPage>;
 };
 
 BlogPage.defaultProps = defaultProps;
