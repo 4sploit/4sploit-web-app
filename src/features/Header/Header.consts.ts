@@ -1,3 +1,3 @@
 export enum ApiConstants {
-  HeaderDBFile = "header1.json",
+  HeaderDBFile = "header.json",
 }
