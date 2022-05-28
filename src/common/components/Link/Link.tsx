@@ -14,7 +14,7 @@ const Link: FC<LinkProps> = ({
   target,
   ...rest
 }) => {
-  let LinkElement = null;
+  let LinkElement: JSX.Element;
 
   switch (linkType) {
     case LinkTypes.Internal:
