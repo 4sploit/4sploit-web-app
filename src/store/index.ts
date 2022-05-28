@@ -1,1 +1,5 @@
-export { default as store, useAppDispatch, useAppSelector } from "./store";
+export {
+  default as store,
+  useTypedDispatch,
+  useTypedSelector,
+} from "./store";
