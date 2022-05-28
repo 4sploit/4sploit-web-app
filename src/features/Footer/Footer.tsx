@@ -13,6 +13,7 @@ import { LinkTypes } from "common/components/Link";
 import { env } from "config";
 import { ApiStatus } from "common/constants";
 import getFooterData from "features/Footer/Footer.thunk";
+import { Loader } from "common/components";
 
 const Footer: FC<FooterProps> = () => {
   const { data, status } = useTypedSelector((state) => state.footer);
@@ -23,6 +24,10 @@ const Footer: FC<FooterProps> = () => {
       dispatch(getFooterData());
     }
   }, [status, dispatch]);
+
+  if (status == ApiStatus.Loading) {
+    return <Loader />;
+  }
 
   return (
     <StyledFooter>
