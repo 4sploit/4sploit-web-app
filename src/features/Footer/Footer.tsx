@@ -1,5 +1,5 @@
-import { FC } from "react";
-import { useTypedSelector } from "store";
+import { FC, useEffect } from "react";
+import { useTypedDispatch, useTypedSelector } from "store";
 import { FooterProps, defaultProps } from "./Footer.props";
 import {
   Container,
@@ -10,15 +10,25 @@ import {
   StyledFooter,
 } from "./Footer.style";
 import { LinkTypes } from "common/components/Link";
+import { env } from "config";
+import { ApiStatus } from "common/constants";
+import getFooterData from "features/Footer/Footer.thunk";
 
 const Footer: FC<FooterProps> = () => {
-  const footerStore = useTypedSelector((state) => state.footer);
+  const { data, status } = useTypedSelector((state) => state.footer);
+  const dispatch = useTypedDispatch();
+
+  useEffect(() => {
+    if (status == ApiStatus.Idle) {
+      dispatch(getFooterData());
+    }
+  }, [status, dispatch]);
 
   return (
     <StyledFooter>
       <Container>
         <FooterLinksContainer>
-          {footerStore.externalLinks.map(
+          {data?.externalLinks.map(
             (link) =>
               link.icon && (
                 <FooterIconLink
@@ -37,7 +47,7 @@ const Footer: FC<FooterProps> = () => {
         </FooterLinksContainer>
         <CopyrightContainer>
           <CopyrightText>
-            {footerStore.ownerName} © {new Date().getFullYear()}
+            {env.ownerName} © {new Date().getFullYear()}
           </CopyrightText>
         </CopyrightContainer>
       </Container>

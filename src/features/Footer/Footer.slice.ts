@@ -1,48 +1,18 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { IconNames } from "common/globals";
-import { Targets } from "common/constants";
-import { Link } from "common/models";
-import { env } from "config";
+import { ApiStatus } from "common/constants";
+import { FooterData } from "common/models";
+import { ApiState } from "common/types";
+import getFooterData from "features/Footer/Footer.thunk";
+import { createApiSlice } from "store/slices";
 
-interface Footer {
-  ownerName: string;
-  externalLinks: Array<Link>;
-}
-
-const initialState: Footer = {
-  ownerName: env.ownerName ?? "",
-  externalLinks: [
-    {
-      id: "1",
-      title: "linkedin",
-      url: "https://linkedin.com/in/4sploit",
-      icon: IconNames.LinkedIn,
-      target: Targets.Blank,
-      isExternal: true,
-    },
-    {
-      id: "2",
-      title: "github",
-      url: "https://github.com/4sploit",
-      icon: IconNames.Github,
-      target: Targets.Blank,
-      isExternal: true,
-    },
-    {
-      id: "3",
-      title: "phone",
-      url: "tel:+972502891914",
-      icon: IconNames.Phone,
-      target: Targets.Blank,
-      isExternal: true,
-    },
-  ],
+const initialState: ApiState<FooterData> = {
+  status: ApiStatus.Idle,
 };
 
-const footerSlice = createSlice({
+const footerSlice = createApiSlice({
   name: "footer",
   initialState,
   reducers: {},
+  thunk: getFooterData,
 });
 
 export default footerSlice.reducer;
