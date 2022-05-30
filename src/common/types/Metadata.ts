@@ -1,4 +1,4 @@
-import Robots from "../constants/Robots";
+import { Robots } from "common/constants";
 
 interface Metadata {
   title: string;
