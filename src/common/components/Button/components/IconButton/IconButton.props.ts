@@ -1,5 +1,6 @@
-import { Actions, IconNames } from "common/globals";
+import { IconNames } from "common/globals";
 import { ButtonBaseProps } from "common/components/Button/Button.props";
+import { Actions } from "common/constants";
 
 export interface IconButtonProps extends ButtonBaseProps {
   action?: Actions;

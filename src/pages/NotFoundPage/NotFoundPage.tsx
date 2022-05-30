@@ -12,7 +12,8 @@ import {
   TitleIcon,
 } from "./NotFoundPage.style";
 import { useNavigate } from "react-router-dom";
-import { Actions, IconNames, Variants } from "common/globals";
+import { IconNames } from "common/globals";
+import { Actions, Variants } from "common/constants";
 
 const NotFoundPage: FC<NotFoundPageProps> = () => {
   const navigate = useNavigate();

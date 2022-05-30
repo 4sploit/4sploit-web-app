@@ -1,5 +1,5 @@
 import { MouseEventHandler, ReactNode } from "react";
-import { Actions, Variants } from "common/globals";
+import { Actions, Variants } from "common/constants";
 
 export interface ButtonBaseProps {
   id?: string;
