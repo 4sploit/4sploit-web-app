@@ -3,11 +3,11 @@ import { ImageProps, defaultProps } from "./Image.props";
 import { StyledImage, StyledLazyImage } from "./Image.style";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
-const Image: FC<ImageProps> = ({ isLazy, ...rest }) => {
+const Image: FC<ImageProps> = ({ isLazy, effect, ...rest }) => {
   return (
     <>
       {isLazy ? (
-        <StyledLazyImage effect="blur" {...rest} />
+        <StyledLazyImage effect={effect} {...rest} />
       ) : (
         <StyledImage {...rest} />
       )}
