@@ -19,7 +19,7 @@
     "jsx": "react-jsx",
     "baseUrl": "src",
     "typeRoots": ["node_modules/@types", "typings"],
-    "types": ["reflect-metadata"]
+    "types": []
   },
   "include": ["src"]
 }
