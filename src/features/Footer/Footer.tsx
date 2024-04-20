@@ -47,7 +47,7 @@ const Footer: FC<FooterProps> = () => {
                       : LinkTypes.Internal
                   }
                 />
-              )
+              ),
           )}
         </FooterLinksContainer>
         <CopyrightContainer>

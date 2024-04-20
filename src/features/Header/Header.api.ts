@@ -7,7 +7,7 @@ class HeaderApi {
 
   getHeaderData = async () => {
     const response = await this._apiClient.get<HeaderData>(
-      ApiConstants.HeaderDBFile
+      ApiConstants.HeaderDBFile,
     );
 
     return response;

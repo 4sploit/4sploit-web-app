@@ -14,7 +14,7 @@ const getFooterData = createAsyncThunk(
     } else {
       return rejectWithValue(response.error);
     }
-  }
+  },
 );
 
 export default getFooterData;

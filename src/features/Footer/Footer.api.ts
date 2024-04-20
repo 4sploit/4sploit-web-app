@@ -7,7 +7,7 @@ class FooterApi {
 
   getFooterData = async () => {
     const response = await this._apiClient.get<FooterData>(
-      ApiConstants.FooterDBFile
+      ApiConstants.FooterDBFile,
     );
 
     return response;

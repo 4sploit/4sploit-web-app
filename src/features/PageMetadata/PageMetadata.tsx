@@ -5,7 +5,7 @@ import { useTypedSelector } from "store";
 
 const PageMetadata: FC = () => {
   const metadata = useTypedSelector(
-    (state) => state.pageMetadata.metadata
+    (state) => state.pageMetadata.metadata,
   );
 
   return <PageMetadataComponent {...metadata} />;

@@ -14,7 +14,7 @@ const getAboutData = createAsyncThunk(
     } else {
       return rejectWithValue(response.error);
     }
-  }
+  },
 );
 
 export default getAboutData;

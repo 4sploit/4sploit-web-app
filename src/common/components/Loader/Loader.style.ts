@@ -6,9 +6,9 @@ interface StyledLoaderProps {}
 export const StyledFade = styled(Fade)<StyledLoaderProps>``;
 
 export const StyledCircularLoader = styled(
-  CircularProgress
+  CircularProgress,
 )<StyledLoaderProps>``;
 
 export const StyledLinearLoader = styled(
-  LinearProgress
+  LinearProgress,
 )<StyledLoaderProps>``;

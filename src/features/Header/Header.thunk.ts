@@ -14,7 +14,7 @@ const getHeaderData = createAsyncThunk(
     } else {
       return rejectWithValue(response.error);
     }
-  }
+  },
 );
 
 export default getHeaderData;

@@ -5,7 +5,7 @@ import { Metadata } from "common/types";
 
 export const withPageMetadata = <P,>(
   WrappedComponent: React.ComponentType<P>,
-  metadata: Metadata
+  metadata: Metadata,
 ) => {
   const WrapperComponent: FC<P> = (props: P) => {
     const dispatch = useTypedDispatch();

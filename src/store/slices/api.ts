@@ -10,7 +10,7 @@ import { castDraft } from "immer";
 
 const createApiSlice = <
   T,
-  Reducers extends SliceCaseReducers<ApiState<T>>
+  Reducers extends SliceCaseReducers<ApiState<T>>,
 >({
   name = "",
   initialState,

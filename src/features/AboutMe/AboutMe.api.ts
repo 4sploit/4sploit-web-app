@@ -7,7 +7,7 @@ class AboutApi {
 
   getAboutData = async () => {
     const response = await this._apiClient.get<AboutData>(
-      ApiConstants.AboutDBFile
+      ApiConstants.AboutDBFile,
     );
 
     return response;

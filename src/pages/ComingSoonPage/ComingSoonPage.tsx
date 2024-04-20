@@ -7,7 +7,7 @@ import { withPageMetadata } from "common/hocs";
 import { metadata } from "./ComingSoonPage.metadata";
 
 const ComingSoonPage: FC<ComingSoonPageProps> = (
-  props: ComingSoonPageProps
+  props: ComingSoonPageProps,
 ) => {
   return (
     <>

@@ -22,7 +22,7 @@ const defaultApiClienRetryPolicyConfig: ApiClientRetryPolicyConfig = {
 
 const createAxiosClientInstance = (
   apiClientRequestConfig: Partial<ApiClientRequestConfig>,
-  apiClienRetryPolicyConfig?: Partial<ApiClientRetryPolicyConfig>
+  apiClienRetryPolicyConfig?: Partial<ApiClientRetryPolicyConfig>,
 ) => {
   const config = {
     ...defaultApiClientRequestConfig,
@@ -49,22 +49,22 @@ class ApiClient {
 
   constructor(
     apiClientRequestConfig: Partial<ApiClientRequestConfig>,
-    apiClienRetryPolicyConfig?: Partial<ApiClientRetryPolicyConfig>
+    apiClienRetryPolicyConfig?: Partial<ApiClientRetryPolicyConfig>,
   ) {
     this.axiosInstance = createAxiosClientInstance(
       apiClientRequestConfig,
-      apiClienRetryPolicyConfig
+      apiClienRetryPolicyConfig,
     );
   }
 
   async get<T>(
     url: string,
-    config?: ApiClientRequestConfig
+    config?: ApiClientRequestConfig,
   ): Promise<ApiResponse<T>> {
     try {
       const { data, status, statusText } = await this.axiosInstance.get<T>(
         url,
-        config
+        config,
       );
       return {
         data,
