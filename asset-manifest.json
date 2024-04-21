@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/4sploit-web-app/static/css/main.6517cd64.css",
+    "main.js": "/4sploit-web-app/static/js/main.a93f247b.js",
+    "static/js/267.1892485f.chunk.js": "/4sploit-web-app/static/js/267.1892485f.chunk.js",
+    "static/js/90.60a5c40f.chunk.js": "/4sploit-web-app/static/js/90.60a5c40f.chunk.js",
+    "static/js/885.8725807e.chunk.js": "/4sploit-web-app/static/js/885.8725807e.chunk.js",
+    "static/media/endless-constellation.svg": "/4sploit-web-app/static/media/endless-constellation.afa4dc19020e41082eab82cb8cef89a5.svg",
+    "static/media/logo.svg": "/4sploit-web-app/static/media/logo.f13386de83766f8b482d5ca679b7df97.svg",
+    "index.html": "/4sploit-web-app/index.html"
+  },
+  "entrypoints": [
+    "static/css/main.6517cd64.css",
+    "static/js/main.a93f247b.js"
+  ]
+}

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_4sploit_web_app=self.webpackChunk_4sploit_web_app||[]).push([[267],{8267:(e,s,t)=>{t.r(s),t.d(s,{default:()=>r});var p,a=t(168);const o=t(3124).ZP.div(p||(p=(0,a.Z)([""])));var c=t(6871),i=t(1253),l=t(6417);const n=()=>(0,l.jsx)(o,{children:(0,l.jsx)(i.x$,{})});n.defaultProps={};const r=(0,c.a)(n,{title:"Home",description:"HomePage"})}}]);
