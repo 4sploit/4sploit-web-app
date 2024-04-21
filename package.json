@@ -2,7 +2,7 @@
   "name": "4sploit-web-app",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://4sploit.dev",
+  "homepage": "https://4sploit.github.io/4sploit-web-app",
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
@@ -46,6 +46,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-redux": "^4.1.0",
     "generate-react-cli": "^8.4.1",
+    "gh-pages": "^6.1.1",
     "react-scripts": "^5.0.1",
     "typescript": "^5.4.5"
   },
@@ -54,6 +55,8 @@
     "typescript": "^5.4.5"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
