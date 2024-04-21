@@ -9,7 +9,7 @@ import { env } from "config";
 import { ApiHeaders } from "common/constants";
 
 const defaultApiClientRequestConfig: ApiClientRequestConfig = {
-  baseUrl: env.apiBaseUrl || "",
+  baseUrl: `${env.appBaseUrl}${env.apiBaseUrl}/` || "",
   headers: {
     [ApiHeaders.ContentType]: "application/json",
   },

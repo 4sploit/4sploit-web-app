@@ -9,9 +9,10 @@ enum ImageFileNames {
 }
 
 type Images = Record<ImageNames, string>;
+const assetsPath = `${env.appBaseUrl}/${env.assetsPath}`;
 
 const Images: Images = {
-  [ImageNames.Photo]: `${env.assetsPath}/images/${ImageFileNames.Photo}`,
+  [ImageNames.Photo]: `${assetsPath}/images/${ImageFileNames.Photo}`,
 };
 
 export { Images, ImageNames };

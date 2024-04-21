@@ -6,6 +6,7 @@ interface EnvConfig {
   assetsPath: string;
   googleAnalyticsTrackingId: string;
   apiBaseUrl: string;
+  appBaseUrl: string;
 }
 
 const {
@@ -16,6 +17,7 @@ const {
   REACT_APP_ASSETS_PATH,
   REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID,
   REACT_APP_API_BASE_URL,
+  REACT_APP_BASE_URL,
 } = process.env;
 
 const env: Partial<EnvConfig> = {
@@ -26,6 +28,7 @@ const env: Partial<EnvConfig> = {
   assetsPath: REACT_APP_ASSETS_PATH,
   googleAnalyticsTrackingId: REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID,
   apiBaseUrl: REACT_APP_API_BASE_URL,
+  appBaseUrl: REACT_APP_BASE_URL,
 };
 
 export default env;

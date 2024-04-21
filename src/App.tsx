@@ -20,7 +20,7 @@ const App = () => {
             <ThemeProvider theme={AppTheme}>
               <CssBaseline />
               <GlobalStyle />
-              <BrowserRouter>
+              <BrowserRouter basename={env.appBaseUrl}>
                 <Routes>
                   {env.isUnderConstruction ? comingSoonRoute : appRoutes}
                 </Routes>
