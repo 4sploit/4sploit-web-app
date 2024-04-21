@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/4sploit-web-app/static/css/main.6517cd64.css",
-    "main.js": "/4sploit-web-app/static/js/main.fd6f2745.js",
+    "main.js": "/4sploit-web-app/static/js/main.9068de2b.js",
     "static/js/267.1892485f.chunk.js": "/4sploit-web-app/static/js/267.1892485f.chunk.js",
     "static/js/90.60a5c40f.chunk.js": "/4sploit-web-app/static/js/90.60a5c40f.chunk.js",
     "static/js/885.8725807e.chunk.js": "/4sploit-web-app/static/js/885.8725807e.chunk.js",
@@ -11,6 +11,6 @@
   },
   "entrypoints": [
     "static/css/main.6517cd64.css",
-    "static/js/main.fd6f2745.js"
+    "static/js/main.9068de2b.js"
   ]
 }
