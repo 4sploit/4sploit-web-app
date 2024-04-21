@@ -2,7 +2,7 @@
   "name": "4sploit-web-app",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://4sploit.github.io/",
+  "homepage": "https://4sploit.github.io/4sploit-web-app",
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
