@@ -72,5 +72,6 @@
     }
   },
   "usesCssModule": false,
-  "cssPreprocessor": "css"
+  "cssPreprocessor": "css",
+  "usesStyledComponents": true
 }
